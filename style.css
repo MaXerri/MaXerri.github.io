@@ -1,0 +1,15 @@
+/* styles.css */
+
+/* .bold-header-h1 class for bold and centered <h1> elements */
+.bold-title-h1 {
+    font-weight: bold;
+    text-align: center;
+    font-size: 2.5em; /* Optional: Adjust size as needed */
+    margin-top: 20px; /* Optional: Adjust spacing as needed */
+}
+
+.bold-title-h2 {
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.5em; /* Optional: Adjust size as needed */
+}
