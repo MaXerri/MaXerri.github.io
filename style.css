@@ -4,7 +4,7 @@
 .bold-title-h1 {
     font-weight: bold;
     text-align: center;
-    font-size: 2.5em; /* Optional: Adjust size as needed */
+    font-size: 4em; /* Optional: Adjust size as needed */
     margin-top: 20px; /* Optional: Adjust spacing as needed */
 }
 
@@ -12,4 +12,10 @@
     font-weight: bold;
     text-align: center;
     font-size: 1.5em; /* Optional: Adjust size as needed */
+}
+
+.social-icons {
+    margin: 0 10px;
+    font-size: 40px; /* Set size of the icons */
+    color: #0077b5; /* Blue color for LinkedIn and GitHub */
 }
