@@ -20,46 +20,52 @@
     color: #0077b5; /* Blue color for LinkedIn and GitHub */
 }
 
-/* Navbar styling */
-nav {
-    background-color: #333;
-    overflow: hidden;
-    border-radius: 5px;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
+/* navbar style */
+*{
     margin: 0;
-    display: flex;
-    justify-content: center;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: linear-gradient(to bottom, #aeb6bf, #eee8d0);
+    background-attachment: fixed;
+    font-family: sans-serif;
 }
 
-nav ul li {
-    display: inline;
-}
-
-nav ul li a {
-    display: block;
-    color: white;
+section{
+    width: 80vw;
+    margin:5% auto;
+    padding-top:40;
     text-align: center;
-    padding: 14px 20px;
+    line-height: 25px
+}
+
+.navbar{
+    min-height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 3px gray;
+    box-shadow: 2px 2px 35px 2px #8a8a1d;
+    padding:12px 28px;
+    font-weight: 700;
+    font-size :larger;
+    align-items: center;
+    letter-spacing: 3px
+}
+
+.navbar i{
+    color: #8a8a1d
+}
+
+.navbar .menu {
+    display: flex;
+}
+
+.navbar ul{
+    list-style: none;
+}
+
+.navbar .menu a{
+    margin-right: 38px;
     text-decoration: none;
-    font-size: 16px;
-    transition: background-color 0.3s;
-}
-
-nav ul li a:hover {
-    background-color: #575757;
-}
-
-/* Responsive styling */
-@media (max-width: 600px) {
-    nav ul {
-        flex-direction: column;
-    }
-
-    nav ul li {
-        width: 100%;
-    }
 }
