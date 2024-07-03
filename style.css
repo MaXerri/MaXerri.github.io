@@ -1,14 +1,14 @@
 /* styles.css */
 
 /* background*/
-/** 
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 body{
-    background-image: linear-gradient(to bottom, #aeb6bf, #eee8d0);
+    background-image: linear-gradient(to bottom, #202223, #3c3b37);
     background-attachment: fixed;
     font-family: sans-serif;
 }
@@ -20,7 +20,7 @@ section{
     text-align: center;
     line-height: 25px
 }
-**/
+
 
 
 
@@ -61,7 +61,7 @@ section{
 }
 
 .navbar i{
-    color: #8a8a1d
+    color: #8a1d45
 }
 
 .navbar .menu {
