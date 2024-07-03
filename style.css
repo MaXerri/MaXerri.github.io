@@ -50,7 +50,7 @@ section{
 .navbar{
     min-height: 10vh;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     border-bottom: solid 3px gray;
     padding:12px 28px;
     font-weight: 700;
