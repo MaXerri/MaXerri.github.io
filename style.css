@@ -8,7 +8,7 @@
     box-sizing: border-box;
 }
 body{
-    background-image: linear-gradient(to bottom, #202223, #3c3b37);
+    background-image: linear-gradient(to bottom, #83898d, #c5c4c4);
     background-attachment: fixed;
     font-family: sans-serif;
 }
@@ -20,8 +20,6 @@ section{
     text-align: center;
     line-height: 25px
 }
-
-
 
 
 /* .bold-header-h1 class for bold and centered <h1> elements */
@@ -60,6 +58,7 @@ section{
     letter-spacing: 3px
 }
 
+/*for logo in the nav bar */
 .navbar i{
     color: #8a1d45
 }
@@ -75,4 +74,10 @@ section{
 .navbar .menu a{
     margin-right: 38px;
     text-decoration: none;
+    color: black
 }
+
+.navbar a:hover{
+    color: white
+}
+
