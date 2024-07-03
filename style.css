@@ -1,6 +1,7 @@
 /* styles.css */
 
 /* background*/
+/** 
 *{
     margin: 0;
     padding: 0;
@@ -19,7 +20,7 @@ section{
     text-align: center;
     line-height: 25px
 }
-
+**/
 
 
 
