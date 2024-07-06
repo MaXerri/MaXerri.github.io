@@ -61,7 +61,7 @@ body{
 }
 
 /* center the navbar elements*/
-.navbar li{
+.navbar .menu li{
     float: left;
     /*position: absolute;
     top: 50%;
