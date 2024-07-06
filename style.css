@@ -74,8 +74,9 @@ body{
 .banner-area bold-title-h1 {
     font-weight: bold;
     text-align: center;
-    font-size: 200px; /* Optional: Adjust size as needed */
-    margin-top: 300px; /* Optional: Adjust spacing as needed */
+    font-size: 300px; /* Optional: Adjust size as needed */
+    margin-top: 100px; /* Optional: Adjust spacing as needed */
+    height: 200px;
 }
 
 .content{
