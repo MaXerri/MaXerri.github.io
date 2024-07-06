@@ -98,7 +98,9 @@ body{
     position: relative;
     background: white;
     top: 500px;
+    height: 700px; 
 }
+
 .content h2.bold-title-h2 {
     font-weight: bold;
     text-align: center;
