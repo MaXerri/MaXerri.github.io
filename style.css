@@ -73,13 +73,6 @@ body{
     padding-top: 75px;
 }
 
-.banner-area h1.bold-title-h1 {
-    font-weight: bold;
-    text-align: center;
-    font-size: 80px !important; /* Optional: Adjust size as needed */
-    color: white;
-}
-
 .banner-area::after{
     content: "";
     position: absolute;
@@ -95,10 +88,13 @@ body{
 .banner-area{
     position:relative;
 }
-.banner >  *{
+
+.banner-area h1.bold-title-h1 {
+    font-weight: bold;
+    text-align: center;
+    font-size: 80px !important; /* Optional: Adjust size as needed */
+    color: white;
     z-index: 10;
-    position: relative;
-    color: white 
 }
 
 /*Content for this home section */
