@@ -71,7 +71,7 @@ body{
     width: 100%;
     padding-top: 100px;
 }
-.banner-area h1 {
+.banner-area h1.bold-title-h1 {
     font-weight: bold;
     text-align: center;
     font-size: 150px !important; /* Optional: Adjust size as needed */
