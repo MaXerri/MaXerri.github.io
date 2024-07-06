@@ -52,7 +52,7 @@ body{
     text-decoration: none;
     color: black;
     display: block;
-    padding:12px /*28px*/;
+    padding:15px /*28px*/;
     text-align: center;
 }
 
@@ -63,7 +63,7 @@ body{
 
 /* center the navbar elements*/
 .navbar li{
-    float: left;
+    float: none;
     position: absolute;
     top: 50%;
     left: 50%;
