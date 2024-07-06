@@ -69,17 +69,17 @@ body{
     height: 400px;
     position: static;
     width: 100%;
+    padding-top: 100px;
 }
 .banner-area bold-title-h1 {
     font-weight: bold;
     text-align: center;
-    font-size: 100px; /* Optional: Adjust size as needed */
+    font-size: 200px; /* Optional: Adjust size as needed */
     margin-top: 100px; /* Optional: Adjust spacing as needed */
 }
 
 .content{
     width: 100%;
-    height: 800px;
     position: relative;
     top: 600px;
 }
