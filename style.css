@@ -34,7 +34,8 @@ body{
     font-weight: 700;
     font-size :larger;
     align-items: center;
-    letter-spacing: 3px
+    letter-spacing: 3px;
+    background-color: #282829;
 }
 
 /*for logo in the nav bar which i do not have */
@@ -57,7 +58,8 @@ body{
 }
 
 .navbar a:hover{
-    color: white
+    color: white;
+    background-color: rgb(105, 87, 123);
 }
 
 /*Top Banner */
