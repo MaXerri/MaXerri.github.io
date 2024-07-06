@@ -77,7 +77,6 @@ body{
     font-weight: bold;
     text-align: center;
     font-size: 80px !important; /* Optional: Adjust size as needed */
-    z-index: 10;
     color: white;
 }
 
@@ -95,6 +94,11 @@ body{
 }
 .banner-area{
     position:relative;
+}
+.banner >  *{
+    z-index: 10;
+    position: relative;
+    color: white 
 }
 
 /*Content for this home section */
