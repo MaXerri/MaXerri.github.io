@@ -81,7 +81,6 @@ body{
 .content{
     width: 100%;
     position: relative;
-    top: 600px;
 }
 .content bold-title-h2 {
     font-weight: bold;
