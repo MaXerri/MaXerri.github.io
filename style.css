@@ -38,11 +38,6 @@ body{
     background-color: #1a1a1b;
 }
 
-/*for logo in the nav bar which i do not have */
-.navbar i{
-    color: #8a1d45
-}
-
 .navbar .menu {
     display: flex;
     list-style: none;
@@ -54,7 +49,7 @@ body{
     margin-right: 38px;
     text-decoration: none;
     color: black;
-
+    display: block;
     padding:12px 28px;
 }
 
