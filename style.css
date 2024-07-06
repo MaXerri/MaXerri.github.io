@@ -36,6 +36,7 @@ body{
     align-items: center;
     letter-spacing: 3px;
     background-color: #1a1a1b;
+    padding: 0px;
 }
 
 .navbar .menu {
