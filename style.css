@@ -52,7 +52,8 @@ body{
     text-decoration: none;
     color: black;
     display: block;
-    padding:12px 28px;
+    padding:12px /*28px*/;
+    text-align: center;
 }
 
 .navbar .menu a:hover{
