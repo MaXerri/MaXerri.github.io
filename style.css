@@ -66,7 +66,7 @@ body{
     background-position: center ;
     background-attachment: local; 
     top: 0px;
-    height: 400px;
+    height: 300px;
     position: static;
     width: 100%;
     padding-top: 100px;
@@ -76,7 +76,7 @@ body{
     text-align: center;
     font-size: 300px; /* Optional: Adjust size as needed */
     margin-top: 100px; /* Optional: Adjust spacing as needed */
-    height: 200px;
+    height: 100px
 }
 
 .content{
