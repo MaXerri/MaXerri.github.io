@@ -62,11 +62,11 @@ body{
 
 /* center the navbar elements*/
 .navbar li{
-    float: none;
-    position: absolute;
+    float: left;
+    /*position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
 }
 
 .navbar .menu a.active{
