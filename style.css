@@ -74,7 +74,7 @@ body{
 .banner-area h1 {
     font-weight: bold;
     text-align: center;
-    font-size: 30px; /* Optional: Adjust size as needed */
+    font-size: 150px !important; /* Optional: Adjust size as needed */
     margin-top: 100px; /* Optional: Adjust spacing as needed */
 }
 
