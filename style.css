@@ -13,13 +13,7 @@ body{
     font-family: sans-serif;
 }
 
-section{
-    width: 80vw;
-    margin:5% auto;
-    padding-top:40;
-    text-align: center;
-    line-height: 25px
-}
+
 
 
 /* .bold-header-h1 class for bold and centered <h1> elements */
