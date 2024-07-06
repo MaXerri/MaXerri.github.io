@@ -75,3 +75,20 @@ body{
     color: white
 }
 
+
+.banner-area {
+    background-image: url("imgs/1.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    position: fixed;
+    width: 100%;
+}
+.banner-area h3{
+    padding-top:8%;
+    font-weight: bold;
+    text-align: center;
+    font-size: 80px;
+}
+
+
