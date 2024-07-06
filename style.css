@@ -47,7 +47,7 @@ body{
 }
 
 .navbar .menu a{
-    margin-right: 38px;
+    /*margin-right: 38px;*/
     text-decoration: none;
     color: black;
     display: block;
