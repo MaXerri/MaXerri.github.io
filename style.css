@@ -93,6 +93,7 @@ body{
     font-weight: bold;
     text-align: center;
     font-size: 80px !important; /* Optional: Adjust size as needed */
+    position: relative;
     color: white;
     z-index: 10;
 }
