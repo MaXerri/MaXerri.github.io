@@ -11,6 +11,7 @@ body{
     /*background-image: linear-gradient(to bottom, #83898d, #c5c4c4);*/
     background-attachment: fixed;
     font-family: sans-serif;
+    text-align: center;
 }
 
 
@@ -72,8 +73,8 @@ body{
 .banner-area bold-title-h1 {
     font-weight: bold;
     text-align: center;
-    font-size: 3em; /* Optional: Adjust size as needed */
-    margin-top: 20px; /* Optional: Adjust spacing as needed */
+    font-size: 100px; /* Optional: Adjust size as needed */
+    margin-top: 100px; /* Optional: Adjust spacing as needed */
 }
 
 .content{
