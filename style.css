@@ -89,7 +89,7 @@ body{
     position:relative;
 }
 
-.banner-area h1.bold-title-h1 {
+.banner-area bold-title-h1 {
     font-weight: bold;
     text-align: center;
     font-size: 80px !important; /* Optional: Adjust size as needed */
