@@ -79,7 +79,7 @@ body{
     font-size: 80px !important; /* Optional: Adjust size as needed */
 }
 
-.banner-area:before{
+.banner-area::after{
     content: "";
     position: absolute;
     top:0;
