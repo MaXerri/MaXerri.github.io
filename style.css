@@ -8,7 +8,7 @@
 
 }
 body{
-    background-image: linear-gradient(to bottom, #83898d, #c5c4c4);
+    /*background-image: linear-gradient(to bottom, #83898d, #c5c4c4);*/
     background-attachment: fixed;
     font-family: sans-serif;
 }
@@ -62,7 +62,8 @@ body{
 .banner-area {
     background-image: url("imgs/1.jpg");
     background-size: cover;
-    background-position: center center;
+    background-position: center ;
+    background-attachment: fixed;
     top: 0px;
     height: 400px;
     position: fixed;
