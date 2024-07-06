@@ -49,6 +49,8 @@ body{
 
 .navbar ul{
     list-style: none;
+    margin: 0px;
+    padding: 0px;
 }
 
 .navbar .menu a{
