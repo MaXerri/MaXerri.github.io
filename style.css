@@ -74,7 +74,7 @@ body{
 .banner-area h1.bold-title-h1 {
     font-weight: bold;
     text-align: center;
-    font-size: 150px !important; /* Optional: Adjust size as needed */
+    font-size: 90px !important; /* Optional: Adjust size as needed */
     margin-top: 100px; /* Optional: Adjust spacing as needed */
 }
 
@@ -82,10 +82,10 @@ body{
     width: 100%;
     position: relative;
 }
-.content bold-title-h2 {
+.content h2.bold-title-h2 {
     font-weight: bold;
     text-align: center;
-    font-size: 90px; /* Optional: Adjust size as needed */
+    font-size: 50px; /* Optional: Adjust size as needed */
 }
 
 .content p{
