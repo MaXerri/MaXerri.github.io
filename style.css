@@ -75,7 +75,7 @@ body{
     font-weight: bold;
     text-align: center;
     font-size: 80px !important; /* Optional: Adjust size as needed */
-    margin-top: 100px; /* Optional: Adjust spacing as needed */
+    margin-top: 10px; /* Optional: Adjust spacing as needed */
 }
 
 .content{
