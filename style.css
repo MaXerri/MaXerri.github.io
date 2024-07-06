@@ -90,11 +90,12 @@ body{
 }
 
 .banner-area .bold-title-h1 {
-    font-weight: bold;
+    /*font-weight: bold;*/
     text-align: center;
     font-size: 80px !important; /* Optional: Adjust size as needed */
     position: relative;
     color: white;
+    font-family: baskerville, serif;
     z-index: 10;
 }
 
