@@ -27,13 +27,13 @@ body{
 .navbar{
     min-height: 10vh;
     /*display: flex;*/
-    justify-content: center;
+    /*justify-content: center;*/
     border-bottom: solid 3px gray;
     border-top: solid 3px gray;
     /*padding:12px 28px;*/
     font-weight: 700;
     font-size :larger;
-    align-items: center;
+    /*align-items: center;*/
     letter-spacing: 3px;
     background-color: #1a1a1b;
     padding: 0px;
