@@ -63,7 +63,7 @@ body{
     background-image: url("imgs/1.jpg");
     background-size: cover;
     background-position: center ;
-    background-attachment: fixed;
+    background-attachment: absolute;
     top: 0px;
     height: 400px;
     position: fixed;
