@@ -39,7 +39,7 @@ body{
     padding: 0px;
 }
 
-.navbar .menu {
+.navbar ul {
     display: flex;
     list-style-type: none;
     margin: 0px;
