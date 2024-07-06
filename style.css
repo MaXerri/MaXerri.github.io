@@ -1,12 +1,12 @@
 /* styles.css */
 
 /* background*/
-
+/*
 *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-}
+} */
 body{
     background-image: linear-gradient(to bottom, #83898d, #c5c4c4);
     background-attachment: fixed;
