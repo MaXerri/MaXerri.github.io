@@ -62,10 +62,7 @@ body{
 }
 
 /* center the navbar elements*/
-.navbar li{
-    float: left;
- 
-}
+
 
 .navbar a.active{
     background-color: rgb(79, 0, 128);
