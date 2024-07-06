@@ -79,7 +79,7 @@ body{
     font-size: 80px !important; /* Optional: Adjust size as needed */
 }
 
-.banner-area:after{
+.banner-area::after{
     content: "";
     position: absolute;
     top:0;
@@ -90,6 +90,9 @@ body{
     background-color: #e47053;
     opacity: 0.6;
     z-index:1;
+}
+.banner-area{
+    position:relative;
 }
 
 /*Content for this home section */
