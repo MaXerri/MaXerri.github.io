@@ -30,7 +30,7 @@ body{
     justify-content: center;
     border-bottom: solid 3px gray;
     border-top: solid 3px gray;
-    padding:12px 28px;
+    /*padding:12px 28px;*/
     font-weight: 700;
     font-size :larger;
     align-items: center;
@@ -49,7 +49,8 @@ body{
 
 .navbar ul{
     list-style: none;
-    background-color: #282829;
+    background-color: #1a1a1b;
+    padding:12px 28px;
 }
 
 .navbar .menu a{
