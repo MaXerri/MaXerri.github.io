@@ -101,7 +101,7 @@ ul li a.active{
 
 /*Content for this home section */
 .content{
-    width: 100%;
+    margin: 10%; 
     position: relative;
     background: white;
     /*top: 500px;
