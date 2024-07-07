@@ -48,16 +48,22 @@ body{
 }
 
 .navbar li{
+    display: inline-block;
+    position:relative;
+
+}
+
+.navbar li a{
     /*margin-right: 38px;*/
     text-decoration: none;
     color: black;
-    display: inline-block;
+    display: block;
     padding:15px /*28px*/;
     text-align: center;
 
 }
 
-.navbar a:hover{
+.navbar li a:hover{
     color: white;
     background-color: rgb(105, 87, 123);
 }
