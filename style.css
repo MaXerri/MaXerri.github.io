@@ -45,6 +45,7 @@ body{
     margin: 0px;
     padding: 0px;
 
+    float: none;
     display: block;
     overflow: hidden;
 }
@@ -53,7 +54,7 @@ body{
     /*margin-right: 38px;*/
     text-decoration: none;
     color: black;
-    display: inine-block;
+    display: inline-block;
     padding:15px /*28px*/;
     text-align: center;
 
