@@ -25,7 +25,7 @@ body{
 /*Navbar settings */
 
 
-ul {
+.navbar ul {
     /*display: flex;*/
     list-style: none;
     background-color: #1a1a1b;
@@ -34,12 +34,12 @@ ul {
 
 }
 
-ul li{
+.navbar ul li{
     display: inline-block;
     position:relative;
 }
 
-ul li a{
+.navbar ul li a{
     /*margin-right: 38px;*/
     text-decoration: none;
     color: white;
@@ -49,13 +49,13 @@ ul li a{
 
 }
 
-ul li a:hover{
+.navbar ul li a:hover{
     color: white;
     background-color: rgb(105, 87, 123);
 }
 
 
-ul li a.active{
+.navbar ul li a.active{
     background-color: rgb(53, 35, 90);
     color: white;
 }
@@ -98,6 +98,12 @@ ul li a.active{
     font-family: baskerville, serif;
     z-index: 10;
 }
+
+/* For mobile device viewing*/
+
+
+
+
 
 /*Content for this home section */
 .content{
