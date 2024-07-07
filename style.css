@@ -47,13 +47,12 @@ body{
 
 }
 
-.navbar li{
+.navbar ul li{
     display: inline-block;
     position:relative;
-
 }
 
-.navbar li a{
+.navbar ul li a{
     /*margin-right: 38px;*/
     text-decoration: none;
     color: black;
