@@ -62,16 +62,13 @@ body{
 
 }
 
-.navbar li a:hover{
+.navbar ul li a:hover{
     color: white;
     background-color: rgb(105, 87, 123);
 }
 
 
-/* center the navbar elements*/
-
-
-.navbar a.active{
+.navbar ul li a.active{
     background-color: rgb(79, 0, 128);
     color: white;
 }
