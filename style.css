@@ -44,6 +44,8 @@ body{
     background-color: #1a1a1b;
     margin: 0px;
     padding: 0px;
+
+    display: block;
     overflow: hidden;
 }
 
@@ -51,7 +53,7 @@ body{
     /*margin-right: 38px;*/
     text-decoration: none;
     color: black;
-    display: block;
+    display: inine-block;
     padding:15px /*28px*/;
     text-align: center;
 
@@ -62,13 +64,6 @@ body{
     background-color: rgb(105, 87, 123);
 }
 
-.navbar li{
-    float: none;
-    position: flex;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
 
 /* center the navbar elements*/
 
