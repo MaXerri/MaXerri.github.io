@@ -24,21 +24,8 @@ body{
 
 /*Navbar settings */
 
-.navbar{
-    min-height: 10vh;
-    /*display: flex;*/
-    /*justify-content: center;*/
-    border-bottom: solid 3px gray;
-    border-top: solid 3px gray;
-    /*padding:12px 28px;*/
-    font-weight: 700;
-    font-size :larger;
-    /*align-items: center;*/
-    letter-spacing: 3px;
-    padding: 0px;
-}
 
-.navbar ul {
+ul {
     /*display: flex;*/
     list-style: none;
     background-color: #1a1a1b;
@@ -47,28 +34,28 @@ body{
 
 }
 
-.navbar ul li{
+ul li{
     display: inline-block;
     position:relative;
 }
 
-.navbar ul li a{
+ul li a{
     /*margin-right: 38px;*/
     text-decoration: none;
     color: black;
     display: block;
-    padding:15px /*28px*/;
+    padding:15px 28px;
     text-align: center;
 
 }
 
-.navbar ul li a:hover{
+ul li a:hover{
     color: white;
     background-color: rgb(105, 87, 123);
 }
 
 
-.navbar ul li a.active{
+ul li a.active{
     background-color: rgb(79, 0, 128);
     color: white;
 }
