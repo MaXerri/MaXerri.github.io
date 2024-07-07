@@ -40,17 +40,14 @@ body{
 
 .navbar ul {
     /*display: flex;*/
-    list-style-type: none;
+    list-style: none;
     background-color: #1a1a1b;
     margin: 0px;
     padding: 0px;
 
-    float: none;
-    display: block;
-    overflow: hidden;
 }
 
-.navbar a{
+.navbar li{
     /*margin-right: 38px;*/
     text-decoration: none;
     color: black;
