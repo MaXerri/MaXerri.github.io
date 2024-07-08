@@ -67,8 +67,8 @@ body{
 }
 
 .navbar .hamburger{
-    position: flex;
-    justify-content: center;
+    position: absolute;
+    right:0;
     display: block;
 }
 
