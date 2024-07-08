@@ -31,11 +31,11 @@ body{
     background-color: #1a1a1b;
     margin: 0px;
     padding: 0px;
-
+    display:flex;
 }
 
 .navbar ul li{
-    display: inline-block;
+    
     position:relative;
 }
 
@@ -43,7 +43,7 @@ body{
     /*margin-right: 38px;*/
     text-decoration: none;
     color: white;
-    display: block;
+    display: inline-block;
     padding:15px 28px;
     text-align: center;
 
@@ -100,9 +100,17 @@ body{
 }
 
 /* For mobile device viewing*/
+/*
+@media screen and (max-width: 768px) {
+    .navbar{
+        margin: 0;
+    }
 
-
-
+    .navbar ul {
+        
+    }
+}
+*/
 
 
 /*Content for this home section */
