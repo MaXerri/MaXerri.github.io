@@ -24,18 +24,20 @@ body{
 
 /*Navbar settings */
 
+.navbar {
+    background-color: #1a1a1b;
+}
 
 .navbar ul {
     /*display: flex;*/
     list-style: none;
-    background-color: #1a1a1b;
     margin: 0px;
     padding: 0px;
 
 }
 
 .navbar ul li{
-    display: inline-block;
+    display: block;
     position:relative;
 }
 
