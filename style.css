@@ -86,12 +86,12 @@ body{
         display: block;
     }
 
-    .navbar .nav-list{
-        display:none;
-    }
-
     .navbar .hamburger {
         display: block;
+    }
+
+    .navbar .nav-list{
+        display:none;
     }
 }
 
