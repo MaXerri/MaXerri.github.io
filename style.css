@@ -107,7 +107,7 @@ body{
 /* For mobile device viewing*/
 
 @media screen and (max-width: 768px) {
-    .navbar nav-list{
+    .navbar .nav-list{
         display: none;
     }
 
