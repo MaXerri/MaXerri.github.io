@@ -42,7 +42,7 @@ body{
 }
 */
 
-.navbar ul li a{
+.navbar ul a{
     /*margin-right: 38px;*/
     text-decoration: none;
     color: white;
@@ -53,13 +53,13 @@ body{
 
 }
 
-.navbar ul li a:hover{
+.navbar ul a:hover{
     color: white;
     background-color: rgb(105, 87, 123);
 }
 
 
-.navbar ul li a.active{
+.navbar ul a.active{
     background-color: rgb(53, 35, 90);
     color: white;
 }
