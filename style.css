@@ -47,7 +47,7 @@ body{
     text-decoration: none;
     color: white;
     /*display: block;*/
-    /*display: inline-block;*/
+    display: inline-block;
     padding: 50px;
     text-align: center;
 
