@@ -69,7 +69,7 @@ body{
 .navbar .hamburger{
     position: flex;
     justify-content: center;
-    display: none;
+    display: block;
 }
 
 /* For mobile device viewing*/
