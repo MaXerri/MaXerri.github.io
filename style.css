@@ -31,20 +31,19 @@ body{
     background-color: #1a1a1b;
     margin: 0px;
     padding: 0px;
-    display:flex;
+
 }
 
 .navbar ul li{
-    
+    display: inline-block;
     position:relative;
 }
-
 
 .navbar ul li a{
     /*margin-right: 38px;*/
     text-decoration: none;
     color: white;
-    display: inline-block;
+    display: block;
     padding:15px 28px;
     text-align: center;
 
@@ -59,12 +58,6 @@ body{
 .navbar ul li a.active{
     background-color: rgb(53, 35, 90);
     color: white;
-}
-
-.navbar .nav-toggle {
-    display: flex;
-    width: 100%;
-    justify-content: center;
 }
 
 /*Top Banner */
@@ -107,7 +100,7 @@ body{
 }
 
 /* For mobile device viewing*/
-
+/*
 @media screen and (max-width: 768px) {
     .navbar{
         margin: 0;
