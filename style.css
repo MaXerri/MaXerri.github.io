@@ -26,6 +26,7 @@ body{
 
 .navbar {
     background-color: #1a1a1b;
+    display: relative; /*check this*/
 }
 
 .navbar .nav-list {
@@ -64,6 +65,41 @@ body{
     background-color: rgb(53, 35, 90);
     color: white;
 }
+
+.navbar .hamburger{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    display: none;
+}
+
+/* For mobile device viewing*/
+
+@media screen and (max-width: 768px) {
+
+    .navbar.open .nav-list{
+        display: block;
+    }
+
+    .navbar.open a {
+        display: block;
+    }
+
+    .navbar .nav-list{
+        display:none;
+    }
+
+    .navbar .hamburger {
+        display: block;
+    }
+}
+
+
+
+
+
+
 
 /*Top Banner */
 .banner-area {
@@ -104,14 +140,7 @@ body{
     z-index: 10;
 }
 
-/* For mobile device viewing*/
 
-@media screen and (max-width: 768px) {
-    .navbar .nav-list{
-        display: none;
-    }
-
-}
 
 
 
