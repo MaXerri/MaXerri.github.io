@@ -41,6 +41,11 @@ body{
     position:relative;
 }
 */
+.navbar .navtoggle {
+    display: flex;
+    justify-content: center;
+}
+
 
 .navbar a{
     /*margin-right: 38px;*/
@@ -48,7 +53,7 @@ body{
     color: white;
     /*display: block;*/
     display: inline-block;
-    padding: 50px;
+    padding: 40px;
     text-align: center;
 
 }
@@ -104,15 +109,12 @@ body{
 }
 
 /* For mobile device viewing*/
-/*
+
 @media screen and (max-width: 768px) {
-    .navbar{
-        margin: 0;
+    .navbar .nav-toggle{
+        display: none;
     }
 
-    .navbar ul {
-        
-    }
 }
 
 
