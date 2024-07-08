@@ -63,6 +63,7 @@ body{
 
 .navbar .nav-toggle {
     display: flex;
+    width: 100%;
 }
 
 /*Top Banner */
