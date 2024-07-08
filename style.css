@@ -19,6 +19,7 @@ body{
     margin: 0 10px;
     font-size: 30px; /* Set size of the icons */
     color: #0077b5; /* Blue color for LinkedIn and GitHub */
+    position: relative;
 }
 
 
@@ -27,6 +28,8 @@ body{
 .navbar {
     background-color: #1a1a1b;
     position: relative; /*check this*/
+    /*display: flex;
+    justify-content: center;*/
 }
 
 .navbar .nav-list {
@@ -49,7 +52,7 @@ body{
     color: white;
     /*display: block;*/
     display: inline-block;
-    padding: 40px;
+    padding: 20px;
     text-align: center;
 
 }
@@ -66,10 +69,9 @@ body{
 }
 
 .navbar .hamburger{
-    position: absolute;
-    right: 0;
-    top: 0;
-    display: block;
+    color: white;
+    font-size: 30px;
+    display: none;
 }
 
 /* For mobile device viewing*/
@@ -78,6 +80,13 @@ body{
 
     .navbar.open .nav-list{
         display: block;
+        position: static;
+        top: 400px;
+        left: 0;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color:#1a1a1b;
     }
 
     .navbar.open a {
@@ -94,8 +103,6 @@ body{
 }
 
 
-
-
 /*Top Banner */
 .banner-area {
     background-image: url("imgs/1.jpg");
@@ -103,7 +110,7 @@ body{
     background-position: center ;
     background-attachment: local; 
     top: 0px;
-    height: 300px;
+    height: 200px;
     position: relative;
     width: 100%;
     padding-top: 75px;
