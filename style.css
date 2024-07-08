@@ -39,6 +39,7 @@ body{
     position:relative;
 }
 
+
 .navbar ul li a{
     /*margin-right: 38px;*/
     text-decoration: none;
@@ -58,6 +59,10 @@ body{
 .navbar ul li a.active{
     background-color: rgb(53, 35, 90);
     color: white;
+}
+
+.navbar .nav-toggle {
+    display: flex;
 }
 
 /*Top Banner */
@@ -100,7 +105,7 @@ body{
 }
 
 /* For mobile device viewing*/
-/*
+
 @media screen and (max-width: 768px) {
     .navbar{
         margin: 0;
@@ -110,7 +115,7 @@ body{
         
     }
 }
-*/
+
 
 
 /*Content for this home section */
