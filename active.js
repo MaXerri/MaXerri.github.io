@@ -1,3 +1,5 @@
+// Add active class to the current page's nav link to hghlightactive page in navbar
+
 const navLinksEls = document.querySelectorAll('.nav__link');
 const windowPathname = window.location.pathname;
 
