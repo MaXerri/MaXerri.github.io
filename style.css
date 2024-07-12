@@ -68,10 +68,21 @@ body{
     color: white;
 }
 
-.navbar .hamburger{
+.navbar .hamburger-toggle{
     color: white;
-    font-size: 30px;
-    display: none;
+    font-size: 25px;
+    display:none;
+    padding: 15px;
+}
+
+.navbar .hamburger-toggle .x{
+    display:none;
+}
+
+
+.navbar .hamburger-toggle:hover{
+    color: white;
+    background-color: rgb(105, 87, 123);
 }
 
 /* For mobile device viewing*/
@@ -93,8 +104,18 @@ body{
         display: block;
     }
 
-    .navbar .hamburger {
+    .navbar .hamburger-toggle{
         display: block;
+    }
+
+    .navbar.open .hamburger-toggle .x{
+        display: block;
+        
+    }
+
+    .navbar.open .hamburger-toggle .hamburger{
+        display: none;
+        padding: 10px;
     }
 
     .navbar .nav-list{

@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script defer src="active.js"></script>
 </head>
 
 <body>
@@ -16,19 +17,22 @@
 
     
     <nav id="navbar-open" class="navbar">
-
-        <div id="hamburger-toggle" class="hamburger">
-            <i class="fa-solid fa-bars"> </i>
+        
+        <div id="hamburger-toggle" class="hamburger-toggle">
+            <div id="hamburger" class="hamburger">
+                <i class="fa-solid fa-bars"> </i>
+            </div>
+            <div id="toggle_x" class="x">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
         </div>
+
         <ul class="nav-list">
-            <li><a class="active" href="index.html">Home</a></li><li><a href="projects.html">Projects</a></li><li><a href="cv.html">CV</a></li><li><a href="coursework.html">Coursework</a></li>
+            <li><a class="nav__link" href="index.html">Home</a></li><li><a class="nav__link" href="projects.html">Projects</a></li><li><a class="nav__link" href="cv.html">CV</a></li><li><a class="nav__link" href="coursework.html">Coursework</a></li>
         </ul>
-    
+        
     </nav>
 
-
-
-    <br>
     
     <div class="content">
         <h2 class="bold-title-h2">About </h2>
@@ -45,5 +49,6 @@
     </div>
 
     <script src="app.js"></script>
+    <script src="active.js"></script>
 </body>
 </html>
