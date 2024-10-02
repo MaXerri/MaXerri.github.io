@@ -126,7 +126,7 @@ body{
 
 /*Top Banner */
 .banner-area {
-    background-image: url("imgs/1.jpg");
+    background-image: url("imgs/better_background.jpeg");
     background-size: cover;
     background-position: center ;
     background-attachment: local; 
