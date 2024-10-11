@@ -121,6 +121,18 @@ body{
     .navbar .nav-list{
         display:none;
     }
+
+    /*Media for the split screen stacking */
+    .container {
+        flex-direction: column; /* Stack items on mobile */
+    }
+    .left-column {
+        padding-right: 0; /* Remove padding on mobile */
+        margin-bottom: 30px; /* Add some space between the columns */
+    }
+    .right-column {
+        margin-top: 40px; /* Add some space between the columns */
+    }
 }
 
 
@@ -186,7 +198,42 @@ body{
     line-height: 30px;
     text-align: justify;
     
-
 }
+
+/* Style for Split Screen body */
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.left-column {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.profile-picture {
+    width: 100%; /* Makes the picture responsive */
+    max-width: 200px; /* Sets a max width for the picture */
+    border-radius: 50%; /* Makes the picture circular */
+}
+
+.socials {
+    margin-top: 10px;
+}
+
+.socials a {
+    display: inline-block;
+    margin-right: 10px;
+    text-decoration: none;
+    color: rgb(0, 0, 14);
+    font-size: 25px;
+}
+
+.right-column {
+    flex: 2;
+}
+
 
 
