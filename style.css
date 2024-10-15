@@ -30,6 +30,7 @@ body{
     position: relative; /*check this*/
     /*display: flex;
     justify-content: center;*/
+    margin-bottom: 0px;
 }
 
 .navbar .nav-list {
@@ -137,7 +138,7 @@ body{
         padding-left: 0px;
         margin-left: 0px;
         margin-right: 0px;
-        margin-top: -30px;
+        margin-top: 0px;
         margin-bottom: 30px; /* Add some space between the columns */
     }
     .right-column {
@@ -215,7 +216,8 @@ body{
 .container {
     display: flex;
     justify-content: space-between;
-    padding: 5px;
+    padding: 0px;
+    margin-top: -40px;
 }
 
 .left-column {
