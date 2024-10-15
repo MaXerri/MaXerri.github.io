@@ -54,6 +54,7 @@ body{
     display: inline-block;
     padding: 20px;
     text-align: center;
+    width: 80px;
 
 }
 
@@ -102,6 +103,10 @@ body{
 
     .navbar.open a {
         display: block;
+        padding-left: 0px; 
+        padding-right: 0px;
+        width: 100%;
+        text-align: center;
     }
 
     .navbar .hamburger-toggle{
@@ -125,9 +130,14 @@ body{
     /*Media for the split screen stacking */
     .container {
         flex-direction: column; /* Stack items on mobile */
+        
     }
-    .left-column {
-        padding-right: 0; /* Remove padding on mobile */
+    .container .left-column {
+        padding-right: 0px; /* Remove padding on mobile */
+        padding-left: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: -30px;
         margin-bottom: 30px; /* Add some space between the columns */
     }
     .right-column {
@@ -205,18 +215,26 @@ body{
 .container {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    padding: 5px;
 }
 
 .left-column {
     flex: 1;
-    padding-right: 20px;
+    padding-right: 40px;
+    padding-left: 10px;
+    margin-right: 0px;
+    margin-left: -45px;
 }
 
 .profile-picture {
     width: 100%; /* Makes the picture responsive */
     max-width: 200px; /* Sets a max width for the picture */
-    border-radius: 50%; /* Makes the picture circular */
+    border-radius: 50%; /* Makes the picture circular */   
+    margin-top: 30px;
+}
+
+.left-column .contact {
+    margin-top: 7px;
 }
 
 .socials {
@@ -226,6 +244,7 @@ body{
 .socials a {
     display: inline-block;
     margin-right: 10px;
+    margin-left: 10px;
     text-decoration: none;
     color: rgb(0, 0, 14);
     font-size: 25px;
