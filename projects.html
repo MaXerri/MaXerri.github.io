@@ -9,6 +9,45 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
         <script defer src="active.js"></script>
+
+        <style>
+            .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+            }
+
+            .project {
+            text-align: center;
+            }
+
+            .project img {
+            max-width: 100%;
+            height: 80%;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+
+            .project a {
+            display: block;
+            margin-top: 10px;
+            text-decoration: none;
+            color: #0073e6;
+            font-weight: bold;
+            }
+
+            .project a:hover {
+            text-decoration: underline;
+            }
+
+            /* Responsive for mobile */
+            @media screen and (max-width: 768px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            }
+        </style>
     </head>
     <body>
         <div class="banner-area">
@@ -31,6 +70,30 @@
             </ul>
 
         </nav>
+
+        <div class="projects-grid">
+            <div class="project">
+              <img src="imgs/hpe_header.png" alt="Project 1">
+              <a href="https://yourwebsite.com/project1" target="_blank">Human Position Estimation</a>
+            </div>
+            <div class="project">
+              <img src="imgs/trader_header.jpg" alt="Project 2">
+              <a href="https://yourwebsite.com/project2" target="_blank">Technical Analysis Trader</a>
+            </div>
+            <div class="project">
+              <img src="project3.jpg" alt="Project 3">
+              <a href="https://yourwebsite.com/project3" target="_blank">Terminal Minesweeper</a>
+            </div>
+            <div class="project">
+              <img src="imgs/pump_header.png" alt="Project 4">
+              <a href="https://yourwebsite.com/project4" target="_blank">Dual Action Piston Pump</a>
+            </div>
+            <div class="project">
+                <img src="imgs/cad.jpg" alt="Project 5">
+                <a href="https://yourwebsite.com/project4" target="_blank">Small CAD Projects </a>
+              </div>
+          </div>
+
 
         <script src="app.js"></script>
         <script src="active.js"></script>
