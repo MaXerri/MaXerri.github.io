@@ -27,7 +27,9 @@ body{
 
 .navbar {
     background-color: #1a1a1b;
-    position: relative; /*check this*/
+    position: sticky; /*check this*/
+    top: 0; /* Need this in order to get the navbar to stop at top when scrolling*/
+    z-index: 1000; /* Set z-index to make sure the navbar is on top of everything */
     /*display: flex;
     justify-content: center;*/
     margin-bottom: 70px;
