@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My GitHub Page</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script defer src="active.js"></script>
+
+    <style>
+        .hpe_content {
+            padding: 40px;
+            text-align: left;
+        }
+
+        .hpe_content .datasets h3 {
+            margin-left: 30px;
+        }
+        .hpe_content .datasets p {
+            margin-left: 30px;
+        }
+        .list-container {
+            display: flex;
+            flex-wrap: wrap;
+            
+        }
+        .list-container ul {
+            width: 24%; /* Specifies the width of each list */
+            padding: 0;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .list-container li {
+            list-style: none;
+            padding: 3px;
+            margin: 3px;
+            background-color: #f4f4f4;
+            border-radius: 5px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="banner-area">
+        <h1 class="bold-title-h1"> Human Position Estimation</h1>
+    </div>
+
+    
+    <nav id="navbar-open" class="navbar">
+        
+        <div id="hamburger-toggle" class="hamburger-toggle">
+            <div id="hamburger" class="hamburger">
+                <i class="fa-solid fa-bars"> </i>
+            </div>
+            <div id="toggle_x" class="x">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </div>
+
+        <ul class="nav-list">
+            <li><a class="nav__link" href="index.html">Home</a></li><li><a class="nav__link" href="projects.html">Projects</a></li><li><a class="nav__link" href="cv.html">CV</a></li><li><a class="nav__link" href="coursework.html">Research</a></li>
+        </ul>
+    </nav>
+
+
+    <div class="hpe_content">
+
+
+        <h1>Overview</h1>
+
+        <br>
+        The following project started as a final project in an AI class and was carried on the following year to produce the current product.
+        <br><br>
+        I worked to make a single person human position estimation model by finetuning a pretrained ViT model using LoRA on 2 human pose estimation datasets. 
+        The project was implemented in python usign the pytorch library and the model was deployed as a Flask application which was then dockerized and deployed on an amazon AWS EC2 instance (taken down becasue there was a fee associated with this).
+
+        <br><br>
+
+        <h3>What is Human Person Estimation?</h3>
+        <br>
+        <p>Human Position Estimation (HPE) is a computer vision task that involves detecting and estimating the positions of human body parts in images or videos. This technology is used in various applications such as motion capture, activity recognition, and human-computer interaction. HPE models typically use deep learning techniques to analyze visual data and predict the coordinates of key body joints, such as the head, shoulders, elbows, and knees.  For our project we only focus on detection of single human instanes within images.</p>
+
+        <br><br>
+
+        <h1>HPE Datasets</h1>
+        <br>
+        The following datasets were used to fine-tune the pretrained visual transformer on the downstream HPE. 
+        <br><br>
+        <div class="datasets">
+            <h3>Leeds Pose Sports Dataset (+ Extended)</h3>
+            <p>The Leeds Sports Pose (LSP) dataset is a collection of images of sports activities, annotated with human body joint locations. It contains 2,000 training images and 1,000 testing images, each with 14 joint annotations. The extended version of the dataset includes an additional 10,000 images.  With a wide range of sports and poses it is a valuable resource for developing and evaluating HPE models.</p>
+            <br><br>
+            <h3>MPII Human Pose Dataset</h3>
+            <p>The MPII Human Pose dataset is a collection of over 25,000 images containing more than 40,000 people with annotated body joints. The dataset covers a wide range of human activities, including everyday activities and sports, captured in various environments. Each image is annotated with up to 16 body joints, providing detailed information about human poses. This dataset is widely used for training and evaluating human pose estimation models.  We only picks out single person insstances from this set leaving us with aroundd 12,000 useable images. </p>
+        </div>
+
+        <br><br>
+        In total we collected aroudn 23,000 annotated training images. May also look into the COCO dataset at a later date.
+        <br><br>
+
+        The following datasets have different number of joints recorded so we limit the set of joints just to the 14 available from the LSP dataset.  The following joints are used:
+        <br><br>
+        <div class="list-container">
+            <ul>
+                <li>R Ankle</li>
+                <li>L Knee</li>
+                <li>R Shoulder</li>
+                <li>Neck</li>
+            </ul>
+            <ul>
+                <li>R Knee</li>
+                <li>L Ankle</li>
+                <li>L Shoulder</li>
+                <li>Shoulder</li>
+            </ul>
+            <ul>
+                <li>R Hip</li>
+                <li>R Wrist</li>
+                <li>L Elbow</li>
+               
+            </ul>
+            <ul>
+                <li>L Hip</li>
+                <li>R Elbow</li>
+                <li>L Wrist</li>
+                
+            </ul>
+        </div>
+
+        <br><br>
+        
+
+        <h1> Model Architecture </h1>
+
+        <br>
+        <h3> Pretrained Huggingface ViT Model </h3>
+
+        <p>The Huggingface ViT (Vision Transformer) model is a state-of-the-art deep learning model for image classification, pre-trained on the ImageNet benchmark dataset.</p>
+        <br>
+        <p> By ignoring the output classification layer on the ViT model, we can directly extract the features outputed by the visual transformer and use them as input to a HPE head (will explain later) which outputs the heatmaps for the 14 joints. </p>
+        <br>
+        <p> This will be finetuned in our training process and will act as our model backbone.
+       
+        <br><br>
+
+        <h3> Deconvolution Head </h3> 
+
+        <p> The model head takes the features outputed by the visual transformer and outputs the heatmaps for the 14 joints.  This is done by using a series of convolutional layers and upsampling layers to increase the resolution of the features and then outputing the heatmaps.  The outputed heatmap is at a lower resolution than the input heatmap and then has to be mapped to the original image size. </p>
+        
+        <br>
+        <h3> Heatmap Joint Representation</h3>
+
+        <p> For tackling the task of 2D human pose estimation, the great majority of the recent methods regard this task as a heatmap estimation problem, and optimize the
+            heatmap prediction using the Gaussian-smoothed heatmap as the optimization
+            objective and using the pixel-wise loss (e.g. MSE) as the loss function. 
+            The use of heatmaps might lead to better guidance in the form of target supervision and can lead to better generalization and more stable convergence.
+            This is the approach that we take in our model.  </p>
+        
+        <br><br>
+
+        <h3> Loss Function & Accuracy Metrics </h3>
+        <p> With the output of the deconvolution head being a heatmap, we employ pixelwise MSE loss for out loss function but also test out other functions such as Adaptive Wing Loss. </p>
+        <p> Evaluation Metrics ... </p>
+        <br><br>
+
+        <br><br>
+
+        <h2> Training </h2>
+
+        The training was perfromed in google collab, using a T4 GPU.  The model was run for around 100 epochs using AdamW optimizer using a learning rate of 5e-4.
+        
+        Insert Training Loss and Test Accuracy Metrics
+
+        <br><br>
+        
+
+
+    </div>
+
+    <script src="app.js"></script>
+    <script src="active.js"></script>
+<body>
+<html>
