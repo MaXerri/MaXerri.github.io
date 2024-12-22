@@ -10,6 +10,7 @@
     <script defer src="active.js"></script>
 
     <style>
+
         .hpe_content {
             padding-left: 75px;
             padding-right: 75px;
@@ -41,6 +42,44 @@
             border-radius: 5px;
         }
 
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 7fr;
+            gap: 0px;
+            align-items: center;
+            padding-left: 75px;
+            padding-right: 75px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+        .header {
+            font-weight: bold;
+            text-align: left;
+            color: rgb(93, 93, 93);
+        }
+        .entry {
+            margin: 1px 0;
+            padding: 5px;
+            border-radius: 5px;
+            text-align: left;
+            display: inline-block;
+        }
+        .x-entry {
+            background-color: #7cb9ef; /* Light blue */
+            color: black; /* Navy */
+        }
+
+        .link-entry a {
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            text-align: left;
+        }
+        .link-entry a:hover {
+            text-decoration: underline;
+        }
+        
+
     </style>
 </head>
 
@@ -66,6 +105,39 @@
         </ul>
     </nav>
 
+    <div class="container">
+        <!-- Tools Section -->
+        <div class="header">
+            <i class="fa-solid fa-list"> </i> &nbsp; Tools
+        </div>
+        <div class="entry">
+            <span class="entry x-entry">Amazon Redshift</span>
+            <span class="entry x-entry">Python</span>
+            <span class="entry x-entry">PySpark</span>
+            <span class="entry x-entry">SQL</span>
+        </div>
+        
+        <!-- Project Type Section -->
+        <div class="header">
+            <i class="fa-solid fa-list"> </i> &nbsp; Tasks
+        </div>
+        <div class="entry">
+            <span class="entry x-entry">Data Cleaning</span>
+            <span class="entry x-entry">Data Transformation</span>
+            <span class="entry x-entry">Data Modelling</span>
+            <span class="entry x-entry">Data Engineering</span>
+        </div>
+        
+        <!-- Link Section -->
+        <div class="header">
+            <i class="fa-solid fa-link"></i> &nbsp; Repo
+        </div>
+        <div class="entry">
+            <div class="link-entry">
+                <a href="https://github.com/mock/example/main" target="_blank">github.com/mock/example/main</a>
+            </div>
+        </div>
+    </div>
 
     <div class="hpe_content">
 
@@ -183,5 +255,6 @@
 
     <script src="app.js"></script>
     <script src="active.js"></script>
+    <script src="random_skill_color.js"></script>
 <body>
 <html>
