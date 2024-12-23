@@ -129,23 +129,6 @@ body{
     .navbar .nav-list{
         display:none;
     }
-
-    /*Media for the split screen stacking */
-    .container {
-        flex-direction: column; /* Stack items on mobile */
-        
-    }
-    .container .left-column {
-        padding-right: 0px; /* Remove padding on mobile */
-        padding-left: 0px;
-        margin-left: 0px;
-        margin-right: 0px;
-        margin-top: 0px;
-        margin-bottom: 30px; /* Add some space between the columns */
-    }
-    .right-column {
-        margin-top: 40px; /* Add some space between the columns */
-    }
 }
 
 
@@ -195,10 +178,14 @@ body{
 
 /*Content for this home section */
 .content{
-    margin: 10%; 
+    margin-top: 125px; 
+    /*margin-left: 5pc;
+    margin-right: 5pc;*/
     position: relative;
     background: white;
-    /*top: 500px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding-top: 30px;;
 }
 
 .content h2.bold-title-h2 {
@@ -216,19 +203,20 @@ body{
 
 /* Style for Split Screen body */
 
-.container {
-    display: flex;
-    justify-content: space-between;
+.container-home {
+    justify-content: center;
     padding: 0px;
     margin-top: -70px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 50px;
+    /*align-items: center;*/
+    margin-left: 3pc;
+    margin-right: 3pc;
 }
 
 .left-column {
-    flex: 1;
-    padding-right: 40px;
-    padding-left: 10px;
-    margin-right: 0px;
-    margin-left: -45px;
+    padding-right: 0px;
 }
 
 .profile-picture {
@@ -256,9 +244,18 @@ body{
 }
 
 .right-column {
-    flex: 2;
+    margin-bottom: 0px;
 }
 
+/* For stacking the profile pick and About Grid */
+@media screen and (max-width: 768px) {
+    .container-home {
+        grid-template-columns: 1fr; /* Stack items on mobile */
+        padding-left: 3pc;
+        padding-right: 3pc;
+    }
+    
+}
 
 
 /* CSS For the CV Tab */

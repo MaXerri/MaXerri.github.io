@@ -49,8 +49,8 @@
             align-items: center;
             padding-left: 75px;
             padding-right: 75px;
-            padding-top: 50px;
-            padding-bottom: 50px;
+            padding-top: 25px;
+            padding-bottom: 15px;
         }
         .header {
             font-weight: bold;
@@ -78,7 +78,67 @@
         .link-entry a:hover {
             text-decoration: underline;
         }
-        
+
+        /* Style For summary section*/
+        /* Styling for the summary section */
+        #summary {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            font-family: "Courier New", Courier, monospace;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        /* Styling for each column */
+        #summary .column {
+            flex: 1;
+            padding: 10px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border: 1px solid #eaeaea;
+        }
+
+        /* Header styling */
+        #summary h2 {
+            color: #2c3e50;
+            font-size: 1.25em;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+            text-align: center;
+        }
+
+        /* Paragraph styling */
+        #summary p {
+            color: #4d4d4d;
+            font-size: 0.95em;
+            line-height: 1.6;
+            margin: 0;
+            text-align: justify;
+        }
+
+        /* Highlighting keywords */
+        #summary strong {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        /* Responsive Layout */
+        @media (max-width: 768px) {
+            #summary {
+                flex-direction: column; /* Stack columns vertically */
+                gap: 10px;
+            }
+
+            #summary .column {
+                flex: none;
+                width: 100%; /* Make each column take up full width */
+            }
+        }
 
     </style>
 </head>
@@ -139,7 +199,30 @@
         </div>
     </div>
 
+
+
     <div class="hpe_content">
+
+        <div id="summary">
+            <div class="column">
+                <h2>Goal</h2>
+                <p>
+                    This project aims at creating an ETL pipeline that builds analytical tables for US air transport analysts with a focus on US domestic air travel. The tables will allow the analysts to investigate the links between US domestic flights and other factors.
+                </p>
+            </div>
+            <div class="column">
+                <h2>Process</h2>
+                <p>
+                    Data is downloaded onto local storage first, then moved into the cloud, to <strong>AWS S3</strong> buckets, and then into <strong>Amazon Redshift</strong>. Once the <strong>Redshift</strong> cluster is up and running, the data is loaded from <strong>S3</strong> to <strong>Redshift</strong>.
+                </p>
+            </div>
+            <div class="column">
+                <h2>Highlights</h2>
+                <p>
+                    The entire project is carried out using the <strong>AWS SDK</strong> to automate much of the ETL process as possible. The file upload to <strong>S3</strong> buckets, creation of a <strong>Redshift</strong> role, and launch of the <strong>Redshift</strong> cluster happen programmatically.
+                </p>
+            </div>
+        </div>
 
 
         <h1>Overview</h1>
