@@ -169,11 +169,7 @@ body{
     color: white;
     font-family: baskerville, serif;
     z-index: 10;
-
 }
-
-
-
 
 
 /*Content for this home section */
@@ -183,7 +179,7 @@ body{
     margin-right: 5pc;*/
     position: relative;
     background: white;
-    max-width: 900px;
+    max-width: 1300px;
     margin: 0 auto;
     padding-top: 30px;;
 }
@@ -211,8 +207,8 @@ body{
     grid-template-columns: 1fr 2fr;
     gap: 50px;
     /*align-items: center;*/
-    margin-left: 3pc;
-    margin-right: 3pc;
+    margin-left: 4pc;
+    margin-right: 4pc;
 }
 
 .left-column {
