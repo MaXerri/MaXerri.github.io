@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My GitHub Page</title>
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script defer src="../active.js"></script>
+
+    <style>
+
+        .small_cad_content {
+            padding-left: 75px;
+            padding-right: 75px;
+            text-align: left;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .hpe_content .datasets h3 {
+            margin-left: 30px;
+        }
+        .hpe_content .datasets p {
+            margin-left: 30px;
+        }
+        .list-container {
+            display: flex;
+            flex-wrap: wrap;
+            
+        }
+        .list-container ul {
+            width: 24%; /* Specifies the width of each list */
+            padding: 0;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .list-container li {
+            list-style: none;
+            padding: 3px;
+            margin: 3px;
+            background-color: #f4f4f4;
+            border-radius: 5px;
+        }
+
+        /* For the skill breakdown */
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 7fr;
+            gap: 0px;
+            align-items: center;
+            padding-left: 75px;
+            padding-right: 75px;
+            padding-bottom: 15px;
+            
+            max-width: 1300px;
+            margin: 0 auto;
+            margin-top: -30px;
+        }
+        
+        .header {
+            font-weight: bold;
+            text-align: left;
+            color: rgb(93, 93, 93);
+        }
+        .entry {
+            margin: 1px 0;
+            padding: 5px;
+            border-radius: 5px;
+            text-align: left;
+            display: inline-block;
+        }
+        .x-entry {
+            background-color: #7cb9ef; /* Light blue */
+            color: black; /* Navy */
+        }
+
+        .link-entry a {
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            text-align: left;
+        }
+        .link-entry a:hover {
+            text-decoration: underline;
+        }
+
+        /* Style For summary section*/
+        /* Styling for the summary section */
+        #summary {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            font-family: "Courier New", Courier, monospace;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        /* Styling for each column */
+        #summary .column {
+            flex: 1;
+            padding: 10px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border: 1px solid #eaeaea;
+        }
+
+        /* Header styling */
+        #summary h2 {
+            color: #2c3e50;
+            font-size: 1.25em;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+            text-align: center;
+        }
+
+        /* Paragraph styling */
+        #summary p {
+            color: #4d4d4d;
+            font-size: 0.95em;
+            line-height: 1.6;
+            margin: 0;
+            text-align: justify;
+        }
+
+        /* Highlighting keywords */
+        #summary strong {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        /* Responsive Layout */
+        @media (max-width: 768px) {
+            #summary {
+                flex-direction: column; /* Stack columns vertically */
+                gap: 10px;
+            }
+
+            #summary .column {
+                flex: none;
+                width: 100%; /* Make each column take up full width */
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="banner-area">
+        <h1 class="bold-title-h1"> Small CAD Projects</h1>
+    </div>
+
+    
+    <nav id="navbar-open" class="navbar">
+        
+        <div id="hamburger-toggle" class="hamburger-toggle">
+            <div id="hamburger" class="hamburger">
+                <i class="fa-solid fa-bars"> </i>
+            </div>
+            <div id="toggle_x" class="x">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </div>
+
+        <ul class="nav-list">
+            <li><a class="nav__link" href="../index.html">Home</a></li><li><a class="nav__link" href="../projects.html">Projects</a></li><li><a class="nav__link" href="../cv.html">CV</a></li><li><a class="nav__link" href="../coursework.html">Research</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <!-- Tools Section -->
+        <div class="header">
+            <i class="fa-solid fa-list"> </i> &nbsp; Tools
+        </div>
+        <div class="entry">
+            <span class="entry x-entry">Fusion 360</span>
+
+        </div>
+        
+        <!-- Project Type Section -->
+        <div class="header">
+            <i class="fa-solid fa-list"> </i> &nbsp; Tasks
+        </div>
+        <div class="entry">
+            <span class="entry x-entry">CAD Devleopment</span>
+
+            
+        </div>
+        
+        <!-- Link Section -->
+        <div class="header">
+            <i class="fa-solid fa-link"></i> &nbsp; Repo
+        </div>
+        <div class="entry">
+            <div class="link-entry">
+                <a href="https://github.com/mock/example/main" target="_blank">github.com/mock/example/main</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="small_cad_content">
+
+        <div id="summary">
+            <div class="column">
+                <h2>Brief Intro</h2>
+                <p>
+                    The following are some small CAD projects that I have worked on while I was still a mechanical engineering major. 
+                </p>
+            </div>
+
+        </div>
+
+
+        <h1>Overview</h1>
+
+        <br>
+        The following project started as a final project in an AI class and was carried on the following year to produce the current product.
+        <br><br>
+        I worked to make a single person human position estimation model by finetuning a pretrained ViT model using LoRA on 2 human pose estimation datasets. 
+        The project was implemented in python usign the pytorch library and the model was deployed as a Flask application which was then dockerized and deployed on an amazon AWS EC2 instance (taken down becasue there was a fee associated with this).
+
+
+
+        
+
+
+    </div>
+
+    <script src="../app.js"></script>
+    <script src="../active.js"></script>
+    <script src="../random_skill_color.js"></script>
+<body>
+<html>
