@@ -215,32 +215,27 @@
             <div class="column">
                 <h2>Goal</h2>
                 <p>
-                    This project aims at creating an ETL pipeline that builds analytical tables for US air transport analysts with a focus on US domestic air travel. The tables will allow the analysts to investigate the links between US domestic flights and other factors.
+                    This project aims at finetuning the <strong>Chronos-T5</strong> time series LLM with <strong>LoRA </strong>for portfolio optimization of ETFs using <strong>price based global factor </strong>data. This started in a monthlong hackathon where we tackled the problem: "How can LLMs be levraged to outperform the <strong>S&P 500</strong>?".
                 </p>
             </div>
             <div class="column">
                 <h2>Process</h2>
                 <p>
-                    Data is downloaded onto local storage first, then moved into the cloud, to <strong>AWS S3</strong> buckets, and then into <strong>Amazon Redshift</strong>. Once the <strong>Redshift</strong> cluster is up and running, the data is loaded from <strong>S3</strong> to <strong>Redshift</strong>.
+                    Price based global factor data was generated from the adjusted HLOC values of our universe of ETFs.  We then trained long only and long-short <strong>portfolio optimization </strong>models using a sliding window training and <strong>backtested</strong> using a sliding window scheme. 
                 </p>
             </div>
             <div class="column">
                 <h2>Highlights</h2>
                 <p>
-                    The entire project is carried out using the <strong>AWS SDK</strong> to automate much of the ETL process as possible. The file upload to <strong>S3</strong> buckets, creation of a <strong>Redshift</strong> role, and launch of the <strong>Redshift</strong> cluster happen programmatically.
+                    We take the novel approach of using LLMs purely for time series analysis, not sentiment analysis and have a robust strategy which outperforms the S&P 500.  When backtested over the period 2002 to 2024 the strategy yielded a sharpe ratio of 2.5. 
                 </p>
             </div>
         </div>
 
-
         <h1>Overview</h1>
 
         <br>
-        The following project started as a final project in an AI class and was carried on the following year to produce the current product.
-        <br><br>
-        I worked to make a single person human position estimation model by finetuning a pretrained ViT model using LoRA on 2 human pose estimation datasets. 
-        The project was implemented in python usign the pytorch library and the model was deployed as a Flask application which was then dockerized and deployed on an amazon AWS EC2 instance (taken down becasue there was a fee associated with this).
-
+        
 
 
     </div>

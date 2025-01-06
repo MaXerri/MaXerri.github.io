@@ -205,7 +205,7 @@
         </div>
         <div class="entry">
             <div class="link-entry">
-                <a href="https://github.com/mock/example/main" target="_blank">github.com/mock/example/main</a>
+                <a href="https://github.com/MaXerri/JointPoseEstimation" target="_blank">https://github.com/MaXerri/JointPoseEstimation</a>
             </div>
         </div>
     </div>
@@ -218,19 +218,19 @@
             <div class="column">
                 <h2>Goal</h2>
                 <p>
-                    This project aims at creating an ETL pipeline that builds analytical tables for US air transport analysts with a focus on US domestic air travel. The tables will allow the analysts to investigate the links between US domestic flights and other factors.
+                    This project aims at <strong>finetuning</strong> a huggingface pretrained vision transformer with standard <strong>LoRA</strong> for single person human position estimation. PyTorch is used as the ML framework for the project.  The model was deployed as a dockerized <strong>Flask</strong> web application on an <strong>AWS EC2</strong> instance.  A CI/CD pipeline is being devleloped to automate model update deployments. 
                 </p>
             </div>
             <div class="column">
                 <h2>Process</h2>
                 <p>
-                    Data is downloaded onto local storage first, then moved into the cloud, to <strong>AWS S3</strong> buckets, and then into <strong>Amazon Redshift</strong>. Once the <strong>Redshift</strong> cluster is up and running, the data is loaded from <strong>S3</strong> to <strong>Redshift</strong>.
+                    The MPII and Leeds Sports Pose datasets were preprocessed and transformed into joint heatmap data for the training process. A <strong>detection head </strong>module was deleloped to upsample the features from the <strong>VIT backbone </strong> and output the <strong>joint heatmaps </strong>for each of the 14 joints. Average precision and object keypoint similarity were used as the model evaluation metrics. 
                 </p>
             </div>
             <div class="column">
                 <h2>Highlights</h2>
                 <p>
-                    The entire project is carried out using the <strong>AWS SDK</strong> to automate much of the ETL process as possible. The file upload to <strong>S3</strong> buckets, creation of a <strong>Redshift</strong> role, and launch of the <strong>Redshift</strong> cluster happen programmatically.
+                    With only 20,000 annotated training instances, we achieve solid accuracy on our holdout set with an AP of around 69.  I am currently implementing heatmaps scaled to the specific joint which should help increase AP.
                 </p>
             </div>
         </div>
