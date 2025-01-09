@@ -17,6 +17,8 @@
             text-align: left;
             max-width: 1300px;
             margin: 0 auto;
+            padding-left: 4pc;
+            padding-right: 4pc;
         }
 
         .hpe_content .datasets h3 {
@@ -134,6 +136,26 @@
             color: #e74c3c;
             font-weight: bold;
         }
+
+        /* Style for the pictures */
+        .pump_content .pump_pic {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            width: 100%;
+            padding-bottom: 20px;
+        }
+
+        .pump_content .pump_pic img {
+            width: 48%;
+            max-width: 1000px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+
+
         /* Responsive Layout */
         @media (max-width: 768px) {
             #summary {
@@ -144,6 +166,14 @@
             #summary .column {
                 flex: none;
                 width: 100%; /* Make each column take up full width */
+            }
+
+            .pump_pic {
+                flex-direction: column; /* Stack columns vertically */
+                gap: 10px;
+            }
+            .pump_content .pump_pic img {
+                width: 100%;
             }
         }
 
@@ -178,9 +208,9 @@
             <i class="fa-solid fa-list"> </i> &nbsp; Tools
         </div>
         <div class="entry">
-            <span class="entry x-entry">OCaml</span>
-            <span class="entry x-entry">Git</span>
-            <span class="entry x-entry">Makefile</span>
+            <span class="entry x-entry">Fusion 360</span>
+            <span class="entry x-entry">Lathe</span>
+            <span class="entry x-entry">Mill</span>
 
         </div>
         
@@ -189,9 +219,10 @@
             <i class="fa-solid fa-list"> </i> &nbsp; Tasks
         </div>
         <div class="entry">
-            <span class="entry x-entry">Game Logic Development</span>
-            <span class="entry x-entry">Unit Testing</span>
-            <span class="entry x-entry">Integration Testing</span>
+            <span class="entry x-entry">CAD</span>
+            <span class="entry x-entry">Machining</span>
+            <span class="entry x-entry">Product Devleopment</span>
+            <span class="entry x-entry">BOM Order</span>
             
         </div>
         
@@ -213,32 +244,35 @@
             <div class="column">
                 <h2>Goal</h2>
                 <p>
-                    This project aims at creating an ETL pipeline that builds analytical tables for US air transport analysts with a focus on US domestic air travel. The tables will allow the analysts to investigate the links between US domestic flights and other factors.
+                    This project aims at creating a <strong>double-acting reciprocating </strong>water pump from scratch.  The pump will be tested and the output <strong>volumetric flow rate </strong> of the pump will be recorded. 
                 </p>
             </div>
             <div class="column">
                 <h2>Process</h2>
                 <p>
-                    Data is downloaded onto local storage first, then moved into the cloud, to <strong>AWS S3</strong> buckets, and then into <strong>Amazon Redshift</strong>. Once the <strong>Redshift</strong> cluster is up and running, the data is loaded from <strong>S3</strong> to <strong>Redshift</strong>.
+                    First the pump was designed in <strong>Fusion 360</strong>.  A bill of materials was constructed and parts were ordered from <strong>McMaster Carr</strong> and/or machined by hand using a <strong>lathe </strong>and/or a <strong>mill</strong>. The parts were then assembled and the pump was tested.
                 </p>
             </div>
             <div class="column">
                 <h2>Highlights</h2>
                 <p>
-                    The entire project is carried out using the <strong>AWS SDK</strong> to automate much of the ETL process as possible. The file upload to <strong>S3</strong> buckets, creation of a <strong>Redshift</strong> role, and launch of the <strong>Redshift</strong> cluster happen programmatically.
+                    Our pump achieved the highest <strong>volumetric flow rate </strong>of all the pumps in the class, achieving a rate of approximately 2.5 L/min.  
                 </p>
             </div>
         </div>
 
+        <div class="pump_pic">
+            <img src="../imgs/pump_pic.png" alt="Pump">
+            <img src="../imgs/Actual_Pump.png" alt="Pump">
+        </div>
 
         <h1>Overview</h1>
 
         <br>
-        The following project started as a final project in an AI class and was carried on the following year to produce the current product.
-        <br><br>
-        I worked to make a single person human position estimation model by finetuning a pretrained ViT model using LoRA on 2 human pose estimation datasets. 
-        The project was implemented in python usign the pytorch library and the model was deployed as a Flask application which was then dockerized and deployed on an amazon AWS EC2 instance (taken down becasue there was a fee associated with this).
-
+        <p>The following was a group project in a mechanical synthesis class where each team developed (from scratch) a water pump of their choice. We were responsible for orderring and/or manufacturing the parts for the pump under a specific budget.  Each pump was tested at the end of the semester and there was a competition to determine which pump was able to achieve the highest volumetric output.</p>
+        <br>
+        <h1>Design</h1>
+        <p> We decided stuck with devleoping a piston pump becasue of its ability to handle high pressures and high flow rates.  In order to maximize our output with a piston pump we used a double actingacting reciprocating piston pump, meaning pumping is performed on both the forward and backwards strokes, effectively doubling the flow output compared to a single piston pump. The motion of the pumps is as follows below.  For more infromation on the structure of the pump, see our project writeup also attattched below.   </p>
 
 
         
