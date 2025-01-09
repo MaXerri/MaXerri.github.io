@@ -154,6 +154,50 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
+        /* Style the video element */
+        .vid_content {
+            display: flex;
+            justify-content: center;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        video {
+            max-width: 100%;
+            max-height: 100%;
+            border: 2px solid #333; /* Optional: for visual border around the video */
+        }
+
+        /* Writeup Link */
+        .pdf-card {
+            display: flex;
+            background-color: #bdbdbd;
+            color: black;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .pdf-thumbnail img {
+            width: 100px;
+            height: auto;
+            object-fit: cover;
+        }
+        .pdf-info {
+            padding: 16px;
+        }
+        .pdf-info h2 {
+            font-size: 18px;
+            margin: 0 0 8px;
+            line-height: 1.4;
+        }
+        .pdf-info p {
+            margin: 4px 0;
+        }
+        .pdf-info em {
+            font-size: 14px;
+            color: #aaa;
+        }
+
 
 
         /* Responsive Layout */
@@ -274,8 +318,27 @@
         <h1>Design</h1>
         <p> We decided stuck with devleoping a piston pump becasue of its ability to handle high pressures and high flow rates.  In order to maximize our output with a piston pump we used a double actingacting reciprocating piston pump, meaning pumping is performed on both the forward and backwards strokes, effectively doubling the flow output compared to a single piston pump. The motion of the pumps is as follows below.  For more infromation on the structure of the pump, see our project writeup also attattched below.   </p>
 
+        <div class="vid_content">
+            <video width="640" height="360" controls>
+                <source src="/vid/pump_vid.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
 
-        
+
+        <div class="pdf-card">
+            <div class="pdf-thumbnail">
+              <img id="thumbnail" alt="PDF Thumbnail">
+            </div>
+            <div class="pdf-info">
+              <h2> Water Pump Final Writeup</h2>
+              <p>Anna Boese, Alexandra Quiana, Matthew Bryan, Jacobo Ospina, Mario Xerri</p>
+              
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+        <script src="../first_page.js?arg=/docs/pump_writeup.pdf"></script>
+
 
 
     </div>
@@ -283,5 +346,6 @@
     <script src="../app.js"></script>
     <script src="../active.js"></script>
     <script src="../random_skill_color.js"></script>
+    
 <body>
 <html>
