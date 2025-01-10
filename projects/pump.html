@@ -10,7 +10,9 @@
     <script defer src="../active.js"></script>
 
     <style>
-
+        body {
+            padding-bottom: 50px; /* Add space at the bottom */
+        }
         .pump_content {
             padding-left: 75px;
             padding-right: 75px;
@@ -178,9 +180,10 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         .pdf-thumbnail img {
-            width: 100px;
+            width: 90px;
             height: auto;
             object-fit: cover;
+            padding: 8px;
         }
         .pdf-info {
             padding: 16px;
@@ -198,6 +201,9 @@
             color: #aaa;
         }
 
+        .pdf-link {
+            text-decoration: none;
+        }
 
 
         /* Responsive Layout */
@@ -325,17 +331,19 @@
             </video>
         </div>
 
+        <a href="/docs/pump_writeup.pdf" target="_blank" class="pdf-link">
+            <div class="pdf-card">
+                <div class="pdf-thumbnail">
+                <img id="thumbnail" alt="PDF Thumbnail">
+                </div>
+                <div class="pdf-info">
+                <h2> Water Pump Final Writeup</h2>
+                <p>Anna Boese, Alexandra Quiana, Matthew Bryan, Jacobo Ospina, Mario Xerri</p>
+                
+                </div>
+            </div>
+        </a>
 
-        <div class="pdf-card">
-            <div class="pdf-thumbnail">
-              <img id="thumbnail" alt="PDF Thumbnail">
-            </div>
-            <div class="pdf-info">
-              <h2> Water Pump Final Writeup</h2>
-              <p>Anna Boese, Alexandra Quiana, Matthew Bryan, Jacobo Ospina, Mario Xerri</p>
-              
-            </div>
-        </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
         <script src="../first_page.js?arg=/docs/pump_writeup.pdf"></script>
 
