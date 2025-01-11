@@ -46,96 +46,6 @@
             border-radius: 5px;
         }
 
-        /* For the skill breakdown */
-        .container {
-            display: grid;
-            grid-template-columns: 1fr 7fr;
-            gap: 0px;
-            align-items: center;
-            padding-left: 75px;
-            padding-right: 75px;
-            padding-bottom: 15px;
-            
-            max-width: 1300px;
-            margin: 0 auto;
-            margin-top: -30px;
-        }
-        
-        .header {
-            font-weight: bold;
-            text-align: left;
-            color: rgb(93, 93, 93);
-        }
-        .entry {
-            margin: 1px 0;
-            padding: 5px;
-            border-radius: 5px;
-            text-align: left;
-            display: inline-block;
-        }
-        .x-entry {
-            background-color: #7cb9ef; /* Light blue */
-            color: black; /* Navy */
-        }
-
-        .link-entry a {
-            color: black;
-            text-decoration: none;
-            font-weight: bold;
-            text-align: left;
-        }
-        .link-entry a:hover {
-            text-decoration: underline;
-        }
-
-        /* Style For summary section*/
-        /* Styling for the summary section */
-        #summary {
-            display: flex;
-            justify-content: space-between;
-            gap: 20px;
-            font-family: "Courier New", Courier, monospace;
-            background-color: #f9f9f9;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            margin: 20px 0;
-        }
-
-        /* Styling for each column */
-        #summary .column {
-            flex: 1;
-            padding: 10px;
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            border: 1px solid #eaeaea;
-        }
-
-        /* Header styling */
-        #summary h2 {
-            color: #2c3e50;
-            font-size: 1.25em;
-            margin-bottom: 10px;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 5px;
-            text-align: center;
-        }
-
-        /* Paragraph styling */
-        #summary p {
-            color: #4d4d4d;
-            font-size: 0.95em;
-            line-height: 1.6;
-            margin: 0;
-            text-align: justify;
-        }
-
-        /* Highlighting keywords */
-        #summary strong {
-            color: #e74c3c;
-            font-weight: bold;
-        }
 
         /* Style for the pictures */
         .pump_content .pump_pic {
@@ -206,16 +116,6 @@
 
         /* Responsive Layout */
         @media (max-width: 768px) {
-            #summary {
-                flex-direction: column; /* Stack columns vertically */
-                gap: 10px;
-            }
-
-            #summary .column {
-                flex: none;
-                width: 100%; /* Make each column take up full width */
-            }
-
             .pump_pic {
                 flex-direction: column; /* Stack columns vertically */
                 gap: 10px;
@@ -250,7 +150,7 @@
         </ul>
     </nav>
 
-    <div class="container">
+    <div class="container-skill">
         <!-- Tools Section -->
         <div class="header">
             <i class="fa-solid fa-list"> </i> &nbsp; Tools
