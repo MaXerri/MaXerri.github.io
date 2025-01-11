@@ -12,6 +12,7 @@ body{
     background-attachment: fixed;
     font-family: sans-serif;
     text-align: center;
+    padding-bottom: 50px; /* Add space at the bottom */
 }
 
 

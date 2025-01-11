@@ -139,11 +139,12 @@
             #summary {
                 flex-direction: column; /* Stack columns vertically */
                 gap: 10px;
+                justify-content: center;
+                align-items: center;
             }
-
             #summary .column {
-                flex: none;
                 width: 100%; /* Make each column take up full width */
+
             }
         }
 
@@ -232,9 +233,23 @@
             </div>
         </div>
 
-        <h1>Overview</h1>
+        <h1>Project Progression </h1>
 
         <br>
+
+        <p>The project originated when our team enterred the Society of Quantitative Analysts (SQA) alphathon, a months long hackathon where we tackled the question: "How can LLMs be leveraged to outperform the S&P 500?".  
+            We were selected as finalists for the competition and took the novel apporach of using LLMs strictly for time series analysis rather than text sentiment analysis.</p>
+        <br>
+        <p>In the competition we developed a portfolio optimization algorithm for the S&P 500, trained on time series technical indicators.   During the competition we were given access to the <strong>QuantConnct</strong> algorithmic trading platform which we utilized for backtesting our algorithm.</p>
+        <br>
+        <!-- Image Section -->
+        <div class="image-section" style="text-align: center;">
+            <img src="../imgs/llm_diagram.png" alt="Portfolio Optimization Chart" style="width:100%; border-radius: 10px; max-width: 700px;">
+        </div>
+        <br>
+        <p>After the completion of the hackathon we pivoted to performing portfolio optimization on a universe of ETFs (accross different industries) using price-based global factor data, outlined in the paper “Is There a Replication Crisis in Finance?” by Jensen, Kelly, and Pedersen.
+            The equal weighted portfolio overall slighly underperforms the S&P 500, but our long only and long-short models outperform the S&P 500. </p>
+        </p>
         
 
 
