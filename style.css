@@ -355,6 +355,39 @@ body{
 }
 
 
+/* Paper/Writeup Section CSS */
+.pdf-card {
+    display: flex;
+    background-color: #bdbdbd;
+    color: black;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.pdf-thumbnail img {
+    width: 90px;
+    height: auto;
+    object-fit: cover;
+    padding: 8px;
+}
+.pdf-info {
+    padding: 16px;
+}
+.pdf-info h2 {
+    font-size: 18px;
+    margin: 0 0 8px;
+    line-height: 1.4;
+}
+.pdf-info p {
+    margin: 4px 0;
+}
+.pdf-info em {
+    font-size: 14px;
+    color: #aaa;
+}
+.pdf-link {
+    text-decoration: none;
+}
 
 
 
