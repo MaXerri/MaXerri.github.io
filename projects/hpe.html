@@ -152,13 +152,15 @@
 
         <h1>HPE Datasets</h1>
         <br>
-        The following datasets were used to fine-tune the pretrained visual transformer on the downstream HPE. 
+        The following datasets were used to fine-tune the pretrained visual transformer on the downstream HPE task. 
         <br><br>
         <div class="datasets">
             <h3>Leeds Pose Sports Dataset (+ Extended)</h3>
+            <br>
             <p>The Leeds Sports Pose (LSP) dataset is a collection of images of sports activities, annotated with human body joint locations. It contains 2,000 training images and 1,000 testing images, each with 14 joint annotations. The extended version of the dataset includes an additional 10,000 images.  With a wide range of sports and poses it is a valuable resource for developing and evaluating HPE models.</p>
             <br><br>
             <h3>MPII Human Pose Dataset</h3>
+            <br>
             <p>The MPII Human Pose dataset is a collection of over 25,000 images containing more than 40,000 people with annotated body joints. The dataset covers a wide range of human activities, including everyday activities and sports, captured in various environments. Each image is annotated with up to 16 body joints, providing detailed information about human poses. This dataset is widely used for training and evaluating human pose estimation models.  We only picks out single person insstances from this set leaving us with aroundd 12,000 useable images. </p>
         </div>
 
@@ -217,7 +219,9 @@
         
         <br>
         <h3> Heatmap Joint Representation</h3>
-
+        <br>
+        <img src="../imgs/heatmap_imgs.png" alt="Heatmap Joint Representation" style="display: block; margin: 0 auto; max-width: 100%; border-radius: 10px;">
+        <br>
         <p> For tackling the task of 2D human pose estimation, the great majority of the recent methods regard this task as a heatmap estimation problem, and optimize the
             heatmap prediction using the Gaussian-smoothed heatmap as the optimization
             objective and using the pixel-wise loss (e.g. MSE) as the loss function. 

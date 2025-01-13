@@ -358,7 +358,7 @@ body{
 /* Paper/Writeup Section CSS */
 .pdf-card {
     display: flex;
-    background-color: #bdbdbd;
+    background-color: #d0d0d0;
     color: black;
     border-radius: 8px;
     overflow: hidden;
@@ -383,7 +383,7 @@ body{
 }
 .pdf-info em {
     font-size: 14px;
-    color: #aaa;
+    color: #656565;
 }
 .pdf-link {
     text-decoration: none;
