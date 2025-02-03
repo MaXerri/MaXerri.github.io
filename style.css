@@ -175,14 +175,13 @@ body{
 
 /*Content for this home section */
 .content{
-    margin-top: 125px; 
+    /*margin-top: 125px; */
     /*margin-left: 5pc;
     margin-right: 5pc;*/
     position: relative;
     background: white;
-    max-width: 1300px;
-    margin: 0 auto;
-    padding-top: 30px;;
+
+    /*padding-top: 30px;*/
 }
 
 .content h2.bold-title-h2 {
@@ -195,7 +194,6 @@ body{
     padding: 2% 0;
     line-height: 30px;
     text-align: justify;
-    
 }
 
 /* Style for Split Screen body */
@@ -203,13 +201,15 @@ body{
 .container-home {
     justify-content: center;
     padding: 0px;
-    margin-top: -70px;
+    /*margin-top: -70px;*/
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 50px;
-    /*align-items: center;*/
+    
     margin-left: 4pc;
     margin-right: 4pc;
+    max-width: 1300px;
+    margin: 0 auto;
 }
 
 .left-column {
