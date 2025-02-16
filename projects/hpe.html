@@ -137,13 +137,6 @@
         <h1>Overview</h1>
 
         <br>
-        The following project started as a final project in an AI class and was carried on the following year to produce the current product.
-        <br><br>
-        I worked to make a single person human position estimation model by finetuning a pretrained ViT model using LoRA on 2 human pose estimation datasets. 
-        The project was implemented in python usign the pytorch library and the model was deployed as a Flask application which was then dockerized and deployed on an amazon AWS EC2 instance (taken down becasue there was a fee associated with this).
-
-        <br><br>
-
         <h3>What is Human Person Estimation?</h3>
         <br>
         <p>Human Position Estimation (HPE) is a computer vision task that involves detecting and estimating the positions of human body parts in images or videos. This technology is used in various applications such as motion capture, activity recognition, and human-computer interaction. HPE models typically use deep learning techniques to analyze visual data and predict the coordinates of key body joints, such as the head, shoulders, elbows, and knees.  For our project we only focus on detection of single human instanes within images.</p>
@@ -181,7 +174,7 @@
                 <li>R Knee</li>
                 <li>L Ankle</li>
                 <li>L Shoulder</li>
-                <li>Shoulder</li>
+                <li>Head (Top)</li>
             </ul>
             <ul>
                 <li>R Hip</li>
@@ -203,6 +196,9 @@
         <h1> Model Architecture </h1>
 
         <br>
+        <img src="../imgs/hpe_architecture.png" alt="Model Architecture" style="display: block; margin: 0 auto; max-width: 100%; border-radius: 10px;">
+        <br>
+
         <h3> Pretrained Huggingface ViT Model </h3>
 
         <p>The Huggingface ViT (Vision Transformer) model is a state-of-the-art deep learning model for image classification, pre-trained on the ImageNet benchmark dataset.</p>
@@ -232,10 +228,9 @@
 
         <h3> Loss Function & Accuracy Metrics </h3>
         <p> With the output of the deconvolution head being a heatmap, we employ pixelwise MSE loss for out loss function but also test out other functions such as Adaptive Wing Loss. </p>
-        <p> Evaluation Metrics ... </p>
+        <p> MSE and Average Precision (AP) were used to evaluate the accuracy of the model on the test set.   </p>
         <br><br>
 
-        <br><br>
 
         <h2> Training </h2>
 
