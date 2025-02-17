@@ -44,6 +44,59 @@
             border-radius: 5px;
         }
 
+        /* Project container style*/
+        .projects-container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .project-card {
+            display: flex;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin-bottom: 20px;
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: scale(1.02);
+        }
+
+        .project-image {
+            width: 30%;
+            object-fit: cover;
+        }
+
+        .project-info {
+            padding: 20px;
+            flex-grow: 1;
+        }
+
+        .project-title {
+            margin: 0;
+            color: #333;
+            font-size: 1.5em;
+        }
+
+        .project-description {
+            color: #666;
+            line-height: 1.6;
+            margin-top: 10px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .project-card {
+                flex-direction: column;
+            }
+            .project-image {
+                width: 100%;
+            }
+        }
+
 
     </style>
 </head>
@@ -77,7 +130,6 @@
         </div>
         <div class="entry">
             <span class="entry x-entry">Fusion 360</span>
-
         </div>
         
         <!-- Project Type Section -->
@@ -86,18 +138,7 @@
         </div>
         <div class="entry">
             <span class="entry x-entry">CAD Devleopment</span>
-
-            
-        </div>
-        
-        <!-- Link Section -->
-        <div class="header">
-            <i class="fa-solid fa-link"></i> &nbsp; Repo
-        </div>
-        <div class="entry">
-            <div class="link-entry">
-                <a href="https://github.com/mock/example/main" target="_blank">github.com/mock/example/main</a>
-            </div>
+            <span class="entry x-entry">3D Printing</span>
         </div>
     </div>
 
@@ -108,20 +149,39 @@
             <div class="column">
                 <h2>Brief Intro</h2>
                 <p>
-                    The following are some small CAD projects that I have worked on while I was still a mechanical engineering major. 
+                    The following are descriptions and reders of some small CAD projects that I have worked on while I was still a mechanical engineering major. Might as well display them here. 
                 </p>
             </div>
 
         </div>
 
 
-        <h1>Overview</h1>
-
         <br>
-        The following project started as a final project in an AI class and was carried on the following year to produce the current product.
-        <br><br>
-        I worked to make a single person human position estimation model by finetuning a pretrained ViT model using LoRA on 2 human pose estimation datasets. 
-        The project was implemented in python usign the pytorch library and the model was deployed as a Flask application which was then dockerized and deployed on an amazon AWS EC2 instance (taken down becasue there was a fee associated with this).
+
+        <div class="projects-container">
+            <div class="project-card">
+                <img src="../imgs/ruleaux.png" alt="CAD Project 1" class="project-image">
+                <div class="project-info">
+                    <h3 class="project-title">Reuleaux Machine</h3>
+                    <p class="project-description">  This is the "Inverse Slider-Crank Mechanism with Higher Pair Joints" within "The Reuleaux Kinematic Mechanisms Collection" at Cornell University. The device turns linear translational motion to circular motion. Originally designed by Franz Reauleaux and manufactured by Gustav Voigt Werkstatt.</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="../imgs/bagel_cutter.png" alt="CAD Project 2" class="project-image">
+                <div class="project-info">
+                    <h3 class="project-title">Guillotine-Style Bagel Slicer</h3>
+                    <p class="project-description"> Kitchen tool designed to safely and evenly slice bagels in half. The guillotine style slicer has a safely shield with a slot to hold the bagel. The serrated blade is attached to the handle which moves vertically, slicing the bagel.</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="../imgs/odp.png" alt="CAD Project 2" class="project-image">
+                <div class="project-info">
+                    <h3 class="project-title">Open Design Project: Whetstone Guide Wedge (WhetWedge)</h3>
+                    <p class="project-description">  Keeps Knife at a constant angle whie sharpening it on a whetstone.  The tool is adjustable for knives of different widths througgh the peg system and the angle can be adjusted by flipped the legs on the syste in out to account for the 2 most common sharpening angles for knives which are 20 (western-style) and 15 (Japaneese-style) degrees. This was 3D printed using PLA.</p>
+                </div>
+            </div>            
+            
+        </div>
 
 
 
