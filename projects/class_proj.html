@@ -114,10 +114,41 @@
             </div>
         </div>
 
-        <h1>projects </h1>
-
+        <br>
         Page still in development. Check the github link for more better info at the moment.  
+        <br><br>
 
+        <div class="projects-container">
+            <div class="project-card">
+                <img src="../imgs/cpu.png" alt="Class CS Project 1" class="project-image">
+                <div class="project-info">
+                    <h3 class="project-title">RISC-V ALU & CPU</h3>
+                    <p class="project-description"> Devleoped a RISC-V ALU and then CPU for 32 bit systems using logisim, a logical circuit simulator.  Developed testing scripts to automatically test inputs to the circuit for both the whole system and smaller components. The overall structure of the CPU is as follows. An instruction is fetched from memory, decoded, executed and results are loaded into memory or written back to registers as needed. The following instructions are supported: ADD, SUB, AND, SLT, SLL, SRA, ADDI, ANDI, LW, LB, SW, SB, LUI, BEQ.   </p>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="../imgs/cache_graph.png" alt="Class CS Project 2" class="project-image">
+                <div class="project-info">
+                    <h3 class="project-title">Cache Simulator</h3>
+                    <p class="project-description">Created a C program which simulates the behavior of a cache under different protocols (VI and MSI). The simulator will be configurable so that it can model the behavior of a variety of cache configurations such as different block sizes and cache associativity. The simulation also records different statistics such as traffic in and out of the cache and miss/hit rates for write-through and write-back caches.  The simulator reads a memory trace mimicking the loads/stores of a program. </p>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="" alt="Class CS Project 3" class="project-image">
+                <div class="project-info">
+                    <h3 class="project-title">RISC-V Interpreter </h3>
+                    <p class="project-description">  </p>
+                </div>
+            </div>            
+            <div class="project-card">
+                <img src="../imgs/froggit.png" alt="Class CS Project 4" class="project-image">
+                <div class="project-info">
+                    <h3 class="project-title">Froggit </h3>
+                    <p class="project-description">Devleoped a clone of the game frogger in python.  The project involved loading the levels, implementing game logic and state, and lastly adding in basic annimation and sound. The graphical objects (different tiles), backgrounds, fonts, and animation frames were all given to students for this assignment. To play the game, you need to have the Cornell Extensions Python package installed for the correct package configurations.  This can be found on the CS1110 Fall 2020 webpage.</p>
+                </div>
+            </div>
+                  
+        </div>
     </div>
 
     <script src="../app.js"></script>
