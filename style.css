@@ -62,8 +62,8 @@ body{
 
 
 .navbar a.active{
-    background-color: #007bff; /* Bootstrap primary blue for active link */
-    color: white;
+    background-color: #d0d0d0; /* Slightly darker light gray for active link, distinct from hover */
+    color: #343a40;
 }
 
 .navbar .hamburger-toggle{
