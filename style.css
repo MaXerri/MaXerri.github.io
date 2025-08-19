@@ -8,11 +8,12 @@
 
 }
 body{
-    /*background-image: linear-gradient(to bottom, #83898d, #c5c4c4);*/
+    background-color: #f4f7f6; /* Very light grey background */
     background-attachment: fixed;
-    font-family: sans-serif;
+    font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; /* More modern font stack */
     text-align: center;
-    padding-bottom: 50px; /* Add space at the bottom */
+    padding-bottom: 50px;
+    color: #333; /* Default text color for better contrast */
 }
 
 
@@ -27,13 +28,13 @@ body{
 /*Navbar settings */
 
 .navbar {
-    background-color: #1a1a1b;
-    position: sticky; /*check this*/
-    top: 0; /* Need this in order to get the navbar to stop at top when scrolling*/
-    z-index: 1000; /* Set z-index to make sure the navbar is on top of everything */
-    /*display: flex;
-    justify-content: center;*/
+    background-color: #f8f9fa; /* Lighter background */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     margin-bottom: 70px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-bottom: 1px solid #e7e7e7; /* Subtle bottom border */
 }
 
 .navbar .nav-list {
@@ -43,38 +44,30 @@ body{
     padding: 0px;
     justify-content: center;
 }
-/*
-.navbar ul li{
-    display: inline-block;
-    position:relative;
-}
-*/
 
 .navbar a{
-    /*margin-right: 38px;*/
     text-decoration: none;
-    color: white;
-    /*display: block;*/
+    color: #343a40; /* Darker text for links */
     display: inline-block;
     padding: 20px;
     text-align: center;
     width: 80px;
-
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
 }
 
 .navbar a:hover{
-    color: white;
-    background-color: rgb(105, 87, 123);
+    color: #0056b3; /* Darker blue on hover */
+    background-color: #e2e6ea; /* Light grey background on hover */
 }
 
 
 .navbar a.active{
-    background-color: rgb(53, 35, 90);
+    background-color: #007bff; /* Bootstrap primary blue for active link */
     color: white;
 }
 
 .navbar .hamburger-toggle{
-    color: white;
+    color: #343a40; /* Darker color for hamburger icon */
     font-size: 25px;
     display:none;
     padding: 15px;
@@ -86,8 +79,8 @@ body{
 
 
 .navbar .hamburger-toggle:hover{
-    color: white;
-    background-color: rgb(105, 87, 123);
+    color: #0056b3; /* Darker blue on hover for hamburger icon */
+    background-color: #e2e6ea; /* Light grey background on hover */
 }
 
 /* For mobile device viewing*/
@@ -102,7 +95,7 @@ body{
         flex-direction: column;
         width: 100%;
         text-align: center;
-        background-color:#1a1a1b;
+        background-color:#f8f9fa;
     }
 
     .navbar.open a {
@@ -163,13 +156,14 @@ body{
 }
 
 .banner-area .bold-title-h1 {
-    /*font-weight: bold;*/
+    font-weight: bold; /* Ensure bold */
     text-align: center;
-    font-size: 50px !important; /* Optional: Adjust size as needed */
+    font-size: 3.5em; /* Relative font size for responsiveness */
     position: relative;
     color: white;
-    font-family: baskerville, serif;
+    font-family: 'Playfair Display', serif; /* A more elegant serif font */
     z-index: 10;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow for readability */
 }
 
 
@@ -179,13 +173,19 @@ body{
     background: white;
     margin-left: 4pc;
     margin-right: 4pc;
-    /*padding-top: 30px;*/
+    padding: 30px; /* Consistent padding */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    margin-top: 30px; /* Add some top margin for separation */
+    margin-bottom: 30px; /* Add some bottom margin for separation */
 }
 
 .content h2.bold-title-h2 {
     font-weight: bold;
     text-align: center;
-    font-size: 40px; /* Optional: Adjust size as needed */
+    font-size: 2.5em; /* Relative font size */
+    color: #007bff; /* Bootstrap primary blue */
+    margin-bottom: 20px; /* Add some space below */
 }
 
 .content p{
@@ -354,11 +354,18 @@ body{
 /* Paper/Writeup Section CSS */
 .pdf-card {
     display: flex;
-    background-color: #d0d0d0;
-    color: black;
-    border-radius: 8px;
+    background-color: white; /* Change to white for consistency with other cards */
+    color: #333; /* Darker text */
+    border-radius: 10px; /* Slightly more rounded */
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* More pronounced shadow */
+    margin-bottom: 20px; /* Add margin for separation */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: 1px solid #e0e0e0; /* Subtle border */
+}
+.pdf-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
 }
 .pdf-thumbnail img {
     width: 90px;
@@ -395,14 +402,16 @@ body{
 .projects-container .project-card {
     display: flex;
     background: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; /* Slightly more rounded */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* More pronounced shadow */
     overflow: hidden;
-    margin-bottom: 20px;
-    transition: transform 0.3s;
+    margin-bottom: 25px; /* Slightly more margin */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition for shadow too */
+    border: 1px solid #e0e0e0; /* Subtle border */
 }
 .projects-container .project-card:hover {
-    transform: scale(1.02);
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
 }
 .project-card .project-image {
     width: 35%;

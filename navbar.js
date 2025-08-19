@@ -30,12 +30,25 @@ function initializeNavbarFeatures() {
     }
 
     const navLinks = document.querySelectorAll('.nav__link');
+    const pathToRoot = document.documentElement.getAttribute('data-path-to-root');
 
-    // Logic for initial active link highlighting
-    const currentPath = window.location.pathname.split('/').pop();
     navLinks.forEach(link => {
-        const linkPath = link.getAttribute('href');
-        if (linkPath === currentPath) {
+        // Prepend pathToRoot to the href if it's a relative path
+        let originalHref = link.getAttribute('href');
+        if (originalHref && !originalHref.startsWith('http') && !originalHref.startsWith('/') && !originalHref.startsWith('#')) {
+            link.setAttribute('href', pathToRoot + originalHref);
+        }
+
+        // Logic for initial active link highlighting
+        const currentFullPath = window.location.pathname;
+        const currentFileName = currentFullPath.split('/').pop();
+        const linkPath = link.getAttribute('href').split('/').pop(); // Use the potentially modified href
+
+        // Check if the current page is projects.html itself
+        // OR if the current page is inside the projects folder
+        if (linkPath === 'projects.html' && currentFullPath.includes('/projects/')) {
+            link.classList.add('active');
+        } else if (linkPath === currentFileName) { // Original logic for other pages
             link.classList.add('active');
         } else {
             link.classList.remove('active'); // Ensure other links are not active

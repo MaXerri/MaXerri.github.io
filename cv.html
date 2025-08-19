@@ -13,25 +13,34 @@
 
         .container {
             width: 86%;
-            margin: 0 auto;
-            display:block;
+            margin: 30px auto; /* Add top/bottom margin */
+            display: block;
             max-width: 1100px;
-
-            /*flex-direction: column;*/
+            background: white; /* Card-like background */
+            padding: 30px; /* Consistent padding */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08); /* Subtle shadow */
         }
 
         h2 {
-            color: #333;
-            border-bottom: 2px solid #333;
-            padding-bottom: 5px;
-            font-size: 35px;
+            color: #007bff; /* Bootstrap primary blue */
+            border-bottom: 2px solid #e0e0e0; /* Lighter border */
+            padding-bottom: 10px; /* More padding */
+            font-size: 2.2em; /* Relative font size */
+            margin-bottom: 25px; /* More space below heading */
+            text-align: left; /* Align to left */
         }
         h3 {
             text-align: left;
+            color: #333; /* Darker color */
+            font-size: 1.5em; /* Larger font size */
+            margin-bottom: 5px; /* Space below h3 */
         }
 
         p {
             text-align: left;
+            color: #555; /* Slightly lighter text color */
+            line-height: 1.6; /* Improved line height */
         }
 
         .section {
@@ -41,19 +50,33 @@
         .entry {
             display: flex;
             align-items: flex-start;
-            margin-bottom: 20px;
-            margin-top: 10px;
+            margin-bottom: 25px; /* More space between entries */
+            margin-top: 15px;
+            padding-bottom: 15px; /* Padding for border */
+            border-bottom: 1px solid #eee; /* Subtle separator */
+        }
+        .entry:last-child { /* Remove border for last entry in section */
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: 0;
         }
 
         .date p{
             text-align: right;
+            font-weight: bold;
+            color: #666;
+            white-space: nowrap; /* Prevent date from wrapping */
+            margin-left: 20px; /* Space from details */
         }
 
         .entry img {
-            width: 100px;
-            height: 100px;
-            object-fit: cover;
+            width: 80px; /* Slightly smaller image */
+            height: 80px;
+            object-fit: contain; /* Ensure logo is fully visible */
             margin-right: 20px;
+            border-radius: 8px; /* Rounded corners for images */
+            padding: 5px; /* Padding for logos */
+            background-color: #f8f9fa; /* Light background for logos */
         }
 
         .details {
@@ -61,14 +84,15 @@
         }
 
         .details ul {
-            margin: 0;
+            margin: 10px 0 0 20px; /* Adjust margin for list */
             padding: 0;
             list-style-type: disc;
+            color: #555; /* List item color */
         }
 
         .details ul li {
-            margin-top: 12px;
-            margin-bottom: 5px;
+            margin-top: 8px; /* Reduced margin */
+            margin-bottom: 3px;
             text-align: left;
         }
 
