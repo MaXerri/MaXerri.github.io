@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" data-path-to-root="../">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My GitHub Page</title>
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script defer src="../active.js"></script>
+
+    <style>
+
+        .llm_opt_content {
+            padding-left: 2pc;
+            padding-right: 2pc;
+            text-align: left;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .hpe_content .datasets h3 {
+            margin-left: 30px;
+        }
+        .hpe_content .datasets p {
+            margin-left: 30px;
+        }
+        .list-container {
+            display: flex;
+            flex-wrap: wrap;
+            
+        }
+        .list-container ul {
+            width: 24%; /* Specifies the width of each list */
+            padding: 0;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .list-container li {
+            list-style: none;
+            padding: 3px;
+            margin: 3px;
+            background-color: #f4f4f4;
+            border-radius: 5px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="banner-area">
+        <h1 class="bold-title-h1"> Multi-Paxos Distributed Transaction Processing System </h1>
+    </div>
+
+    
+    <div id="navbar-placeholder"></div>
+
+    <div class="container-skill">
+        <!-- Tools Section -->
+        <div class="header">
+            <i class="fa-solid fa-list"> </i> &nbsp; Tools
+        </div>
+        <div class="entry">
+            <span class="entry x-entry">C++</span>
+            <span class="entry x-entry">gRPC</span>
+            <span class="entry x-entry">Protobuf</span>
+            <span class="entry x-entry">CMake</span>
+        </div>
+        
+        <!-- Project Type Section -->
+        <div class="header">
+            <i class="fa-solid fa-list"> </i> &nbsp; Tasks
+        </div>
+        <div class="entry">
+            <span class="entry x-entry">Fault-Tolerance</span>
+            <span class="entry x-entry">Hypergraph Partitioning</span>
+            <span class="entry x-entry">Asynchronous Programming</span>
+            <span class="entry x-entry">Benchmarking</span>
+        </div>
+        
+        <!-- Link Section -->
+        <div class="header">
+            <i class="fa-solid fa-link"></i> &nbsp; Repo
+        </div>
+        <div class="entry">
+            <div class="link-entry">
+                <a href="https://github.com/MaXerri/Multi-Paxos-Distributed-Txn-Processing-System" target="_blank">https://github.com/MaXerri/Multi-Paxos-Distributed-Txn-Processing-System</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="llm_opt_content">
+
+        <div id="summary">
+            <div class="column">
+                <h2>Goal</h2>
+                <p>
+                    Developed a scalable fault-tolerant <strong>Multi-Paxos</strong> based distributed transaction processing system supporting money transfers and account balance reads. Data was sharded between multiple clusters and cross shard transactions were handled with the <strong>2 Phase Commit protocol</strong>.
+                </p>
+            </div>
+            <div class="column">
+                <h2>Process</h2>
+                <p>
+                    Each node lives on its own seperate process and communicates with other nodes using <strong>gRPC</strong>. The system is designed to handle node failures gracefully using the Multi-Paxos consensus algorithm to ensure <strong>consistency</strong> across replicas. Transactions are processed <strong>asynchronously</strong> to maximize throughput, and a <strong>benchmarking suite</strong> was developed to evaluate system performance under various workloads.
+                </p>
+            </div>
+            <div class="column">
+                <h2>Highlights</h2>
+                <p>
+                    Was able to process <strong>3000 transactions per second</strong> on a cluster of 5 nodes. The benchmarking system allows users to generate workloads with different cross-shard transaction percentages, read/write ratios and workload distributions. Additionally <strong>hypergraph partitioning</strong> was implemented to re-shard data members to minimize cross-shard transactions.
+                </p>
+            </div>
+        </div>
+
+        <h1>Overview</h1>
+        <p>
+            The application is a distributed transaction processing system designed to handle <strong>money transfers</strong> and <strong>account balance reads</strong> across multiple nodes. Each transaction, such as transferring funds between accounts or querying balances, is processed reliably and consistently, even in the presence of node failures. <strong>gRPC</strong> is used for efficient inter-node communication, enabling fast and scalable message passing between distributed components. The system is engineered for <strong>high performance</strong>, supporting thousands of transactions per second through asynchronous processing and optimized data sharding.
+        </p>
+        <br>
+        <h3>Data Sharding and Coordination</h3>
+        <p>
+            <strong>Data sharding</strong> is used to partition account data across several clusters, allowing the system to scale horizontally. Each shard manages a subset of accounts, and transactions involving accounts from different shards require coordination. To ensure atomicity and consistency for these <strong>cross-shard transactions</strong>, the system implements the <strong>2 Phase Commit (2PC)</strong> protocol. This protocol coordinates between shards to guarantee that either all parts of a transaction succeed or none do, preventing partial updates.
+        </p>
+        <br>
+        <h3>Resharding</h3>
+        <p>
+            To further optimize performance, <strong>hypergraph partitioning</strong> is employed for data sharding. This technique intelligently assigns accounts to shards based on transaction patterns, minimizing the number of cross-shard transactions and improving overall throughput.
+        </p>
+        <br>
+        <h3>Benchmarking and Performance Testing</h3>
+        <p>
+            The <strong>benchmarking suite</strong> enables users to simulate various workloads, specifying the ratio of read to write operations and controlling the distribution of transactions. For example, workloads can be centered around specific accounts or regions, or can vary the percentage of cross-shard transactions. This flexibility helps evaluate system performance under realistic and diverse scenarios.
+        </p>
+ 
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+        <script src="../first_page.js?arg=/docs/Alphathon_2024_LLM_Problem_Submission.pdf"></script>
+
+
+    </div>
+
+    <script src="../navbar.js"></script>
+    <script src="../app.js"></script>
+    <script src="../active.js"></script>
+    <script src="../random_skill_color.js"></script>
+    <button id="scrollToTopBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+    <script src="../scrollToTop.js"></script>
+</body>
+</html>

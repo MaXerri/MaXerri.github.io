@@ -63,6 +63,7 @@
         <div class="entry">
             <span class="entry x-entry">C</span>
             <span class="entry x-entry">Python</span>
+            <span class="entry x-entry">Websockets</span>
             <span class="entry x-entry">Logisim</span>
             <span class="entry x-entry">RISCV</span>
             <span class="entry x-entry">Java</span>
@@ -73,6 +74,7 @@
             <i class="fa-solid fa-list"> </i> &nbsp; Tasks
         </div>
         <div class="entry">
+            <span class="entry x-entry">Distributed Systems Consesnus Protocols</span>
             <span class="entry x-entry">Game Devleopment</span>
             <span class="entry x-entry">CPU Logic Development</span>
         </div>
@@ -106,28 +108,35 @@
 
         <div class="projects-container">
             <div class="project-card">
-                <img src="../imgs/cpu.png" alt="Class CS Project 1" class="project-image">
+                <img src="../imgs/pbft.png" alt="Class CS Project 1" class="project-image">
+                <div class="project-info">
+                    <h3 class="project-title">Byzantine Fault Tolerance Protocol-Based Distributed Transaction Processing System </h3>
+                    <p class="project-description"> Developed a fault-tolerant transaction processing system with PBFT-based consensus. The system maintains consensus in the presense of malicious nodes which can perform various attacks including timing attacks, equivocation attacks, in dark attacks, signature attacks etc. There were several optimizations made to improve the efficiency of the original protocol such as using linearized phases for prepare and commit, threshold signatures for aggregately signing messages, as well as optimistic phase reduction. Lerveraged python asyncio + websockets for sending and handling inter process messages.  </p>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="../imgs/cpu.png" alt="Class CS Project 2" class="project-image">
                 <div class="project-info">
                     <h3 class="project-title">RISC-V ALU & CPU</h3>
                     <p class="project-description"> Devleoped a RISC-V ALU and then CPU for 32 bit systems using logisim, a logical circuit simulator.  Developed testing scripts to automatically test inputs to the circuit for both the whole system and smaller components. The overall structure of the CPU is as follows. An instruction is fetched from memory, decoded, executed and results are loaded into memory or written back to registers as needed. The following instructions are supported: ADD, SUB, AND, SLT, SLL, SRA, ADDI, ANDI, LW, LB, SW, SB, LUI, BEQ.   </p>
                 </div>
             </div>
             <div class="project-card">
-                <img src="../imgs/cache_graph.png" alt="Class CS Project 2" class="project-image">
+                <img src="../imgs/cache_graph.png" alt="Class CS Project 3" class="project-image">
                 <div class="project-info">
                     <h3 class="project-title">Cache Simulator</h3>
                     <p class="project-description">Created a C program which simulates the behavior of a cache under different protocols (VI and MSI). The simulator will be configurable so that it can model the behavior of a variety of cache configurations such as different block sizes and cache associativity. The simulation also records different statistics such as traffic in and out of the cache and miss/hit rates for write-through and write-back caches.  The simulator reads a memory trace mimicking the loads/stores of a program. </p>
                 </div>
             </div>
             <div class="project-card">
-                <img src="" alt="Class CS Project 3" class="project-image">
+                <img src="" alt="Class CS Project 4" class="project-image">
                 <div class="project-info">
                     <h3 class="project-title">RML Interpreter </h3>
                     <p class="project-description"> Devleoped an interepreter for an OCaml like language called RML (Robot Meta-Language).  </p>
                 </div>
             </div>            
             <div class="project-card">
-                <img src="../imgs/froggit.png" alt="Class CS Project 4" class="project-image">
+                <img src="../imgs/froggit.png" alt="Class CS Project 5" class="project-image">
                 <div class="project-info">
                     <h3 class="project-title">Froggit </h3>
                     <p class="project-description">Devleoped a clone of the game frogger in python.  The project involved loading the levels, implementing game logic and state, and lastly adding in basic annimation and sound. The graphical objects (different tiles), backgrounds, fonts, and animation frames were all given to students for this assignment. To play the game, you need to have the Cornell Extensions Python package installed for the correct package configurations.  This can be found on the CS1110 Fall 2020 webpage.</p>
