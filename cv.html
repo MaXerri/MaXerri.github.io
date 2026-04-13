@@ -102,6 +102,49 @@
         .work-experience .entry ul {
             list-style-type: square;
         }
+
+        @media (max-width: 768px) {
+            .entry {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .details {
+                display: contents;
+            }
+
+            .details h3 {
+                order: 1;
+                width: 100%;
+            }
+
+            .date {
+                order: 2;
+                margin-bottom: 8px;
+            }
+
+            .details p {
+                order: 3;
+                width: 100%;
+            }
+
+            .details ul {
+                order: 4;
+                width: 100%;
+            }
+
+            .entry img {
+                order: 0;
+                align-self: center;
+                margin-right: 0;
+                margin-bottom: 12px;
+            }
+
+            .date p {
+                text-align: left;
+                margin-left: 0;
+            }
+        }
     </style>
 
 </head>
@@ -125,6 +168,8 @@
                     <h3>Master of Science in Computer Science</h3>
                     <p><i><strong>Stony Brook University</strong> </i></p>
                     <ul>
+                        <li>Concentration in Data Science</li>
+                        <li> GPA: 3.9/4.0 </li>
                         <li>Coursework: NLP, Distributed Systems, Simulation & Modeling, Machine Learning in Finance, Dynamic Programming, Database Systems </li>
                     </ul>
                 </div>
@@ -135,9 +180,10 @@
                 <img src="imgs/cornell.png" alt="School Logo 2">
                 <div class="details">
                     <h3>Bachelor of Science in Computer Science</h3>
-                    <p><i><strong>Cornell University</strong></i> </p>
+                    <p><i><strong>Cornell University, College of Engineering</strong></i> </p>
                     <ul>
-                        <li>Minor In Applied Mathematics</li>
+                        <li>Minor In Applied Mathematics (mosly ORIE courses)</li>
+                        <li>GPA: 3.7/4.0</li>
                         <li>Coursework: ML, RL, Stochastic Processes, Analysis of Algorithms, OS, Computer System Organization & Programming, Functional Programming, Numerical Analysis (NLA), Foundations of Robotics, Data Structures & OOP</li>
                     </ul>
                 </div>
@@ -153,7 +199,7 @@
                     <h3>Graduate Research Assistant</h3>
                     <p><i><strong>Stony Brook University</strong></i> </p>
                     <ul>
-                        <li>Researching multimodal reasoning abilities of chain-of-thought VLM agents </li>
+                        <li>Researching RL-based methods for multi-objective optimization problems such as compression of chain-of-thought (CoT) reasoning. </li>
                         <li>Working With Dr. Jiawei (Joe) Zhou</li>
                     </ul>
                 </div>
@@ -166,8 +212,9 @@
                     <h3>Data Science Intern</h3>
                     <p><i><strong>Evernorth Health Services | The Cigna Group</strong></i> </p>
                     <ul>
-                        <li>Developed a large language model solutions for document analysis, including building the initial infrastructure, crafting/refining prompts, assessing model performance, communicating results to stakeholders, and gathering new requirements.</li>
-                        <li>Applied topic modeling and NLP techniques to analyze call transcript data, extracting recurring themes and actionable business insights to improve member and operational experiences.</li>
+                        <li>Developed LLM-based solutions for document analysis / entity extraction, including building the initial infrastructure, crafting/refining prompts, assessing model performance, communicating results to stakeholders, and gathering new requirements.</li>
+                        <li>Applied topic modeling and NLP techniques to analyze large-scale call transcript data (multiple TBs) pertaining to members with GLP-1 pharmaceutical claims using tools like SQL and PySpark. Extracting recurring themes and actionable business insights to improve member and operational experiences.</li>
+                        <li>Led the design and analysis of controlled A/B tests on prior authorization communications, leveraging statistical metrics to quantify changes in call volume and member satisfaction, and informing data-driven improvements to member experience.</li>
                     </ul>
                 </div>
                 <div class = "date"> <p>May-Aug 2025 </p> <p>Morris Plains, NJ</p></div>
@@ -179,9 +226,9 @@
                     <h3>Data Science Intern</h3>
                     <p><i><strong>UL Solutions</strong></i> </p>
                     <ul>
-                        <li>Revamped the Plenum Cable Large-Scale Flame Test model, used for over 1000 testing services per year.</li>
-                        <li>Doubled the training set size with data extracted from backend databases and web scraping, enhancing model accuracy by 15%.</li>
-                        <li>Deployed a data pipeline to automate model execution and store results in a cloud database.</li>
+                        <li>Revamped the Cable Flame predictive models, used for over 1000 testing services per year.</li>
+                        <li>Automated data extraction, performed EDA and feature engineering, and trained A Random Forest model in Scikit-learn to identify abnormal test behaviors and predict cable failure risk, improving predictive accuracy by 15%</li>
+                        <li>Designed and deployed ETL pipelines to preprocess incoming data for model execution, enabling scalable inference and automated retraining in production.</li>
                     </ul>
                 </div>
                 <div class = "date"> <p>May-Aug 2024</p> <p>Northbrook, IL</p></div>
