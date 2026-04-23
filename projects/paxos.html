@@ -115,22 +115,49 @@
 
         <h1>Overview</h1>
         <p>
-            The application is a distributed transaction processing system designed to handle <strong>money transfers</strong> and <strong>account balance reads</strong> across multiple nodes. Each transaction, such as transferring funds between accounts or querying balances, is processed reliably and consistently, even in the presence of node failures. <strong>gRPC</strong> is used for efficient inter-node communication, enabling fast and scalable message passing between distributed components. The system is engineered for <strong>high performance</strong>, supporting thousands of transactions per second through asynchronous processing and optimized data sharding.
+            This project is a fault-tolerant distributed transaction processing system for <strong>money transfers</strong> and <strong>account balance reads</strong>. It combines <strong>Multi-Paxos</strong>-based consensus for replica consistency, <strong>sharding</strong> for horizontal scale, and <strong>asynchronous gRPC</strong> messaging for for high throughput, cross-procesess/server communication. The result is a system that remains consistent under failures while processing thousands of transactions per second.
         </p>
         <br>
-        <h3>Data Sharding and Coordination</h3>
+        <h1>System Design</h1>
+
+        <div style="text-align:center; margin: 1.5rem 0;">
+            <img
+                src="../imgs/paxos_sys_diagram.png"
+                alt="Multi-Paxos system diagram"
+                style="max-width: 100%; height: auto; border-radius: 8px;"
+            >
+        </div>
+
         <p>
-            <strong>Data sharding</strong> is used to partition account data across several clusters, allowing the system to scale horizontally. Each shard manages a subset of accounts, and transactions involving accounts from different shards require coordination. To ensure atomicity and consistency for these <strong>cross-shard transactions</strong>, the system implements the <strong>2 Phase Commit (2PC)</strong> protocol. This protocol coordinates between shards to guarantee that either all parts of a transaction succeed or none do, preventing partial updates.
+            Account data is partitioned across multiple shards, where each shard is replicated for fault tolerance. Within each shard, a Multi-Paxos leader coordinates log replication so all replicas apply transactions in the same order. Client requests are routed to the responsible shard(s), and each node runs in its own process while communicating through gRPC.
+        </p>
+        <p>
+            The design also includes workload-aware resharding with <strong>hypergraph partitioning</strong>, which places highly related accounts together to reduce cross-shard traffic. A dedicated <strong>benchmarking suite</strong> measures throughput and latency under different read/write ratios, skewed workloads, and cross-shard percentages.
         </p>
         <br>
-        <h3>Resharding</h3>
+        <h2>2PC for Cross-Shard Transactions</h2>
         <p>
-            To further optimize performance, <strong>hypergraph partitioning</strong> is employed for data sharding. This technique intelligently assigns accounts to shards based on transaction patterns, minimizing the number of cross-shard transactions and improving overall throughput.
+            When a transaction touches accounts in different shards, the system uses <strong>2 Phase Commit (2PC)</strong> to preserve atomicity across shards. Basically, you don't want the execution to be executed on one shard and then be aborted by the other, which would lead to an inconsistent state where one shard has applied the transaction while the other has not.
+        </p>
+        <p>
+            
         </p>
         <br>
-        <h3>Benchmarking and Performance Testing</h3>
         <p>
-            The <strong>benchmarking suite</strong> enables users to simulate various workloads, specifying the ratio of read to write operations and controlling the distribution of transactions. For example, workloads can be centered around specific accounts or regions, or can vary the percentage of cross-shard transactions. This flexibility helps evaluate system performance under realistic and diverse scenarios.
+            <strong>Phase 1 - Prepare:</strong> The coordinator asks each participant shard to validate and lock the transaction state. Each shard replicates its prepare decision through its local Multi-Paxos log before replying <strong>READY</strong> or <strong>ABORT</strong>.
+        </p>
+        <p>
+            <strong>Phase 2 - Commit/Abort:</strong> If all shards respond <strong>READY</strong>, the coordinator broadcasts <strong>COMMIT</strong>; otherwise it broadcasts <strong>ABORT</strong>. Each shard replicates and applies the final decision, then releases locks. This guarantees that either all shard updates are applied or none are.
+        </p>
+        <br>
+        <h3>Resharding with Hypergraph Partitioning</h3>
+        <p>
+            To further optimize performance, <strong>hypergraph partitioning</strong> is used during resharding. This approach groups strongly connected accounts based on observed transaction patterns, reducing the number of cross-shard transactions and lowering coordination overhead.
+        </p>
+        <br>
+        <h2>Benchmarking and Performance Testing</h2>
+        <p>
+            The <strong>benchmarking suite</strong> allows users to generate workloads with different read/write ratios, workload distributions, and cross-shard transaction percentages. It supports both skewed and uniform access patterns, making it easier to evaluate throughput and latency under realistic operating conditions.
         </p>
  
 
